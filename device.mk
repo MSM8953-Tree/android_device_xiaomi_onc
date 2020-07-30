@@ -390,7 +390,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh
+    init.qcom.post_boot.sh \
+    init.qcom.sensors.sh
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
