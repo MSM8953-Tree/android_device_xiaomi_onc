@@ -18,3 +18,8 @@ allow system_app privapp_data_file:dir search;
 allow system_app sysfs:file { write open getattr };
 allow system_app sysfs_rtc:dir search;
 allow system_app sysfs_rtc:file { open read getattr };
+
+# Health HAL
+r_dir_file(system_app, sysfs_battery_supply)
+allow system_app sysfs_battery_supply:dir { search };
+allow system_app sysfs_battery_supply:file { open read getattr };
