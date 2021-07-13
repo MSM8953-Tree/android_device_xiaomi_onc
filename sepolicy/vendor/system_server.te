@@ -6,3 +6,6 @@ r_dir_file(system_server, keylayout_file);
 
 # Fingerprint
 get_prop(system_server, vendor_fp_prop);
+
+# Alarm
+allow system_server vendor_alarm_boot_prop:file { read open getattr };
