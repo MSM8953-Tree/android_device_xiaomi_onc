@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+TARGET_BOARD_PLATFORM := msm8953
+
+TARGET_BOARD_SUFFIX := _64
+
 $(call inherit-product, vendor/xiaomi/onclite/onclite-vendor.mk)
 
 # APEX
