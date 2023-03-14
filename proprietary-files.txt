@@ -12,10 +12,6 @@ product/lib64/com.qualcomm.qti.ant@1.0.so|f40868ad57012f1a512b14c889bc8380652cc5
 vendor/lib/com.qualcomm.qti.ant@1.0.so|8119c98f53a94736d95a2fb59225e0a054e038b8
 vendor/lib64/com.qualcomm.qti.ant@1.0.so|f40868ad57012f1a512b14c889bc8380652cc50f
 
-# aptX HD Audio - from crosshatch-user 10 QP1A.190711.020 5800535 release-keys
-product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-
 # Audio (ACDB) - from MIUI
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|b1af9d0c2df5df1ab93a734060e51b21dc1d80f9
 vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|d8ee1f8cf35ef1198be68cfac3ad45d94eaee674
