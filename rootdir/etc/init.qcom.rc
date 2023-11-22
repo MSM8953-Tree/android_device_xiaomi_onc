@@ -116,6 +116,12 @@ on early-boot
     chown system system /mnt/vendor/persist/data/pfm/licenses
     chmod 0775 /mnt/vendor/persist/data/pfm/licenses
 
+on boot && property:ro.boot.bootdevice=7864900.sdhci
+    symlink /dev/block/platform/soc/7824900.sdhci/by-name/modemst1 /dev/block/bootdevice/by-name/modemst1
+    symlink /dev/block/platform/soc/7824900.sdhci/by-name/modemst2 /dev/block/bootdevice/by-name/modemst2
+    symlink /dev/block/platform/soc/7824900.sdhci/by-name/fsc /dev/block/bootdevice/by-name/fsc
+    symlink /dev/block/platform/soc/7824900.sdhci/by-name/fsg /dev/block/bootdevice/by-name/fsg
+
 on boot
     chown system system /sys/bus/i2c/devices/3-0038/set_cover_mode
     chmod 0660 /sys/bus/i2c/devices/3-0038/set_cover_mode
