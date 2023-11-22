@@ -1,1 +1,4 @@
 allow init proc_boot_reason:file r_file_perms;
+
+# SDHCI
+allow init sysfs_kernel_sdhci_msm:file w_file_perms;

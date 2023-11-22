@@ -8,3 +8,5 @@ genfscon sysfs /devices/platform/soc/soc:qcom,mdss_wb_panel/extcon              
 # Rmt
 genfscon debugfs /rmt_storage	u:object_r:debugfs_rmt:s0
 
+# SDHCI
+genfscon sysfs /kernel/sdhci_msm	u:object_r:sysfs_kernel_sdhci_msm:s0
