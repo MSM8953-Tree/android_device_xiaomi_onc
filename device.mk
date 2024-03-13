@@ -317,6 +317,7 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    fstab.qcom_ramdisk \
     init.msm.usb.configfs.rc \
     init.onclite.rc \
     init.qcom.rc \
