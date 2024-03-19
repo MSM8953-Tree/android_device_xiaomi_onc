@@ -24,6 +24,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
     FrameworksResOverlayOnc \
+    SystemUIOverlayOnc \
     OncWifiOverlay \
     WifiOverlay
 
