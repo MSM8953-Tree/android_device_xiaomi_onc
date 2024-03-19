@@ -27,8 +27,8 @@ PRODUCT_PACKAGES += \
     CarrierConfigResOnc \
     SettingsOverlayOnc \
     TelephonyResResOnc \
-    OncWifiOverlay \
-    WifiOverlay
+    WifiOverlayResOnc \
+    WifiOverlayOnc
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
