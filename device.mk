@@ -26,6 +26,7 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayOnc \
     SystemUIOverlayOnc \
     CarrierConfigResOnc \
+    SettingsOverlayOnc \
     OncWifiOverlay \
     WifiOverlay
 
