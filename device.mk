@@ -133,7 +133,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     libgui_vendor \
     libstdc++_vendor \
-    vendor.qti.hardware.camera.device@1.0
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.camera.device@1.0.vendor
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -158,7 +159,8 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libtinyxml \
-    vendor.display.config@1.9
+    vendor.display.config@1.9 \
+    vendor.display.config@1.9.vendor
 
 # Doze mode
 PRODUCT_PACKAGES += \
