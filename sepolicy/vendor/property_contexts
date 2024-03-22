@@ -2,12 +2,8 @@ ro.alarm_boot              u:object_r:vendor_alarm_boot_prop:s0
 sys.listeners.registered   u:object_r:vendor_tee_listener_prop:s0
 sys.post_boot.parsed       u:object_r:vendor_mpctl_prop:s0
 persist.net.doxlat         u:object_r:vendor_xlat_prop:s0
-
-# Camera
 camera.dual.mode           u:object_r:camera_prop:s0
 persist.camera.            u:object_r:camera_prop:s0
-persist.vendor.camera.     u:object_r:camera_prop:s0
-persist.vendor.vidhance.   u:object_r:camera_prop:s0
 ctl.vendor.imsrcsd         u:object_r:vendor_ctl_vendor_imsrcsservice_prop:s0
 
 # Fingerprint
@@ -26,7 +22,3 @@ vendor.wlan.driver.config       u:object_r:vendor_wifi_config:s0
 # Vendor camera
 persist.vendor.camera.                       u:object_r:vendor_camera_prop:s0
 persist.vendor.vidhance.dmbr.mode            u:object_r:vendor_camera_prop:s0
-
-# vendor_radio_prop
-persist.vendor.data.shsusr_load                 u:object_r:vendor_radio_prop:s0
-persist.vendor.data.qmipriod_load               u:object_r:vendor_radio_prop:s0
