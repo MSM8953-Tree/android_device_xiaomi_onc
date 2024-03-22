@@ -150,6 +150,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Display
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0 \
     android.frameworks.displayservice@1.0.vendor \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
@@ -281,6 +282,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 
 PRODUCT_PACKAGES += \
+   libavservices_minijail \
    libavservices_minijail.vendor
 
 # Netutils
