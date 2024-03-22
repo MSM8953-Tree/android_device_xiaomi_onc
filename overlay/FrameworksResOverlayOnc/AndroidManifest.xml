@@ -8,5 +8,5 @@
      package="android.overlay.onc">
      <overlay android:targetPackage="android"
           android:isStatic="true"
-          android:priority="0" />
+          android:priority="1000" />
 </manifest>

@@ -14,5 +14,5 @@
       android:isStatic="true"
       android:requiredSystemPropertyName="ro.boot.hwversion"
       android:requiredSystemPropertyValue="1.19.0"
-      android:priority="850"/>
+      android:priority="999"/>
 </manifest>

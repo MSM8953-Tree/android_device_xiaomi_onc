@@ -8,5 +8,5 @@
      package="com.android.carrierconfig.overlay.onc">
      <overlay android:targetPackage="com.android.carrierconfig"
           android:isStatic="true"
-          android:priority="0" />
+          android:priority="1000" />
 </manifest>
