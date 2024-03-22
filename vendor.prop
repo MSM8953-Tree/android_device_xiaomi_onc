@@ -35,6 +35,7 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Display post-processing
 ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
 ro.vendor.display.cabl=0
 ro.vendor.display.sensortype=2
 vendor.display.disable_rotator_downscale=1
