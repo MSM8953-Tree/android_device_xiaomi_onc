@@ -61,6 +61,9 @@ function blob_fixup() {
     vendor/bin/pm-service)
     grep -q "libutils-v33.so" "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
         ;;
+    vendor/lib/lib_lowlight.so)
+        "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+        ;;
     esac
 }
 

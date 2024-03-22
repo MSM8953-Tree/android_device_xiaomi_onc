@@ -184,7 +184,6 @@ vendor/lib/libFaceGrade.so
 vendor/lib/libSNPE.so
 vendor/lib/libVDClearShot.so
 vendor/lib/libXMFD_AgeGender.so
-vendor/lib/lib_lowlight.so
 vendor/lib/libbase64.so
 vendor/lib/libc++_shared.so
 vendor/lib/libcamera_scene.so
@@ -219,6 +218,9 @@ vendor/lib64/libbase64.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libvideoutils.so
+
+# Camera (Patched) - from MIUI
+vendor/lib/lib_lowlight.so|0c994d585acd94928b50081aa5e91c70793583d8
 
 # Camera-actuators
 vendor/lib/libactuator_dw9714.so
