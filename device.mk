@@ -32,7 +32,8 @@ PRODUCT_PACKAGES += \
     TelephonyResResOnc \
     WifiOverlayResOnc \
     WifiOverlayOnc \
-    TetherResOnc
+    TetherResOnc \
+    VendorResOnc
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
