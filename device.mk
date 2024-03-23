@@ -430,6 +430,10 @@ TARGET_USES_DEVICE_SPECIFIC_VIBRATOR := true
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.3-service.xiaomi_onclite
 
+# vndservicemanager
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # Whitelisted app
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist.xml \
