@@ -6,4 +6,4 @@ allow hal_camera_default camera_data_file:sock_file write;
 allow hal_camera_default camera_data_file:dir create_dir_perms;
 allow hal_camera_default camera_data_file:file create_file_perms;
 
-allow hal_camera_default default_prop:file { read };
+allow hal_camera_default default_prop:file { open read write setattr getattr map };
