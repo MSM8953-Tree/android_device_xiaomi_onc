@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+PRODUCT_SHIPPING_API_LEVEL := 28
+
 TARGET_BOARD_PLATFORM := msm8953
 
 TARGET_BOARD_SUFFIX := _64
