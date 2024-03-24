@@ -360,6 +360,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom_ramdisk \
+    fstab.qcom_ramdisk2 \
     init.msm.usb.configfs.rc \
     init.onclite.rc \
     init.qcom.rc \
