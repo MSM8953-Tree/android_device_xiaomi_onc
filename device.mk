@@ -360,7 +360,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom_ramdisk \
     fstab.qcom_ramdisk2 \
-    init.msm.usb.configfs.rc \
+    init.qcom.usb.sh \
     init.onclite.rc \
     init.qcom.rc \
     init.qcom.sh \
@@ -420,6 +420,9 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # USB HAL
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/usb/etc
+
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
