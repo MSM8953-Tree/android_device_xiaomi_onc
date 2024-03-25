@@ -106,6 +106,7 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
+    libaudioroute \
     libaudio-resampler \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -314,6 +315,7 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
+    libminijail \
     libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -324,6 +326,9 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
+
+PRODUCT_PACKAGES += \
+    libstagefright_enc_common
 
 # Power
 PRODUCT_PACKAGES += \
