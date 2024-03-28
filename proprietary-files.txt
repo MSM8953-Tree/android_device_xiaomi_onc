@@ -807,19 +807,6 @@ vendor/etc/camera/onc_s5kgd1sp_ofilm_india_ii_chromatix.xml
 vendor/etc/camera/onc_s5kgd1sp_sunny_india_i_chromatix.xml
 vendor/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin
 
-# Camera-firmware
-vendor/firmware/cpp_firmware_v1_10_0.fw
-vendor/firmware/cpp_firmware_v1_12_0.fw
-vendor/firmware/cpp_firmware_v1_1_1.fw
-vendor/firmware/cpp_firmware_v1_1_6.fw
-vendor/firmware/cpp_firmware_v1_2_0.fw
-vendor/firmware/cpp_firmware_v1_4_0.fw
-vendor/firmware/cpp_firmware_v1_5_0.fw
-vendor/firmware/cpp_firmware_v1_5_1.fw
-vendor/firmware/cpp_firmware_v1_5_2.fw
-vendor/firmware/cpp_firmware_v1_6_0.fw
-vendor/firmware/cpp_firmware_v1_8_0.fw
-
 # Camera-ois
 vendor/lib/libois_bu63165.so
 vendor/lib/libois_lc898122.so
@@ -1028,36 +1015,50 @@ vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 # Fingerprint (Patched) - from MIUI
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc|8105eb42c1aef643d4d28846307a1df20075cd56
 
-# Firmware
-etc/firmware/ice40.bin
-vendor/firmware/a225_pfp.fw
-vendor/firmware/a225_pm4.fw
-vendor/firmware/a225p5_pm4.fw
-vendor/firmware/a300_pfp.fw
-vendor/firmware/a300_pm4.fw
-vendor/firmware/a330_pfp.fw
-vendor/firmware/a330_pm4.fw
-vendor/firmware/a420_pfp.fw
-vendor/firmware/a420_pm4.fw
-vendor/firmware/a506_zap.b00
-vendor/firmware/a506_zap.b01
-vendor/firmware/a506_zap.b02
-vendor/firmware/a506_zap.elf
-vendor/firmware/a506_zap.mdt
-vendor/firmware/a530_gpmu.fw2
-vendor/firmware/a530_pfp.fw
-vendor/firmware/a530_pm4.fw
-vendor/firmware/a530v1_pfp.fw
-vendor/firmware/a530v1_pm4.fw
-vendor/firmware/a530v2_seq.fw2
-vendor/firmware/a530v3_gpmu.fw2
-vendor/firmware/a530v3_seq.fw2
-vendor/firmware/a540_gpmu.fw2
-vendor/firmware/aw87329_abrcv.bin
-vendor/firmware/aw87329_drcv.bin
-vendor/firmware/aw87329_kspk.bin
-vendor/firmware/leia_pfp_470.fw
-vendor/firmware/leia_pm4_470.fw
+# Firmware - from MIUI (onc-user 10 QKQ1.191008.001 V12.5.1.0.QFLCNXM release-keys)
+etc/firmware/ice40.bin|a29bdcdbfda7f7dae24a3c8921abe2bcda6ae38e
+vendor/firmware/a225_pfp.fw|7ba4003796285d36c125fabe453b45d5e21850cc
+vendor/firmware/a225_pm4.fw|87d6f27ca08b521cc3361f63f0631a1fef2403ac
+vendor/firmware/a225p5_pm4.fw|02e5fb26c121d388104bc6a0f31811dfa91f1828
+vendor/firmware/a300_pfp.fw|899dbfad4812084971cfc1ff30f06a4b45c2d34c
+vendor/firmware/a300_pm4.fw|94529206b45b6e9f6ed30dadabe4244a88a60975
+vendor/firmware/a330_pfp.fw|3e2fcee7276ded819cf2d95864fdd6788a484ee1
+vendor/firmware/a330_pm4.fw|ae739ea812f9e4462d7bba8b9ead5782d4496618
+vendor/firmware/a420_pfp.fw|ceb61d9f1385b3f2956d72f33e0bd43cb12f72f0
+vendor/firmware/a420_pm4.fw|96addc1f5cb6dd3a57fc40ef0a6ba8721d5b601f
+vendor/firmware/a506_zap.b00|21d74ee137e4096c2ffcd6f2545b5b2f8f384efa
+vendor/firmware/a506_zap.b01|ed5353883c8cfd13251d299ddb1dc99a7c3d0a9b
+vendor/firmware/a506_zap.b02|3e301fa5905acd05f15836959595791c1241a017
+vendor/firmware/a506_zap.elf|3ae71440cd467848db992dc3a09dae9679ecc130
+vendor/firmware/a506_zap.mdt|e655850e03badd8521c7a86eb175b0af18565a67
+vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
+vendor/firmware/a530_pfp.fw|c19e1905c15622d7bb02409e6748959bceda9b08
+vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
+vendor/firmware/a530v1_pfp.fw|0864291b99bed712edfcffa94be7b4595d3af306
+vendor/firmware/a530v1_pm4.fw|6a82a4fb4035fa2a933c1a26b5535d7ec7c0ac4c
+vendor/firmware/a530v2_seq.fw2|63b6d25594a5c1f4217d996a2b636e17a29fc840
+vendor/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
+vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
+vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
+vendor/firmware/a630_gmu.bin|32bb4acc7767c47ddb487ed7cb998d465ee462f2
+vendor/firmware/a630_sqe.fw|e7eed1455b2a051f07a3093506f87788b5969949
+vendor/firmware/aw87329_abrcv.bin|61bc7cdc050256f63e8c35f679aab252e2fb775f
+vendor/firmware/aw87329_drcv.bin|38946a889be67c1a11d928d78eec5eeefc98b436
+vendor/firmware/aw87329_kspk.bin|bc96cdb8fe5bcaacf29ef4f9868d5631a1832efb
+vendor/firmware/cpp_firmware_v1_10_0.fw|a3c0fc706eb3f23b99852fe8c52c26f63999f70c
+vendor/firmware/cpp_firmware_v1_12_0.fw|c7939d46f9875054c5b30c3280862e7d9df3dcf9
+vendor/firmware/cpp_firmware_v1_12_1.fw|b74b657c666706ef8d0740a32b6f245a0f6c3fe1
+vendor/firmware/cpp_firmware_v1_1_1.fw|04b8eb253d630eaeadab296e1607dc6a29d93d3c
+vendor/firmware/cpp_firmware_v1_1_6.fw|6b2c9fe0a43a9ce86a921e18faffe4d0a35746ee
+vendor/firmware/cpp_firmware_v1_2_0.fw|5ff0d66bcdbb29f4e924d011ae825583e48b3962
+vendor/firmware/cpp_firmware_v1_4_0.fw|11eba982212797920102912142940a9e08931c52
+vendor/firmware/cpp_firmware_v1_5_0.fw|ac19cd179b7b118bb3ea01a35fdfc78dc58164a1
+vendor/firmware/cpp_firmware_v1_5_1.fw|f3f622ab29a560b170d0f2c6ddec14b933f2d476
+vendor/firmware/cpp_firmware_v1_5_2.fw|58dd7f7c09dbb62bc6f334a8885064b292610675
+vendor/firmware/cpp_firmware_v1_6_0.fw|dcd3d1f904c7ee3d731f8f28b5f78f2503916ada
+vendor/firmware/cpp_firmware_v1_8_0.fw|26e2badbb4e3049243f0a176722f26879e7b87e8
+vendor/firmware/leia_pfp_470.fw|46a8ce821d218359ff7e846db5dcc15b31bdd5ca
+vendor/firmware/leia_pm4_470.fw|99364b0afd94e496ccc833ca0424dd6853b971d5
 
 # GPS - from daisy-user-10-QKQ1.191002.002-V11.0.18.0.QDLMIXM-release-keys
 vendor/bin/garden_app|f0a1f082c2abaf0ffda363e52361587f1c8a7492
