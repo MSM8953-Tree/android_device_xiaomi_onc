@@ -379,7 +379,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom_ramdisk \
     fstab.qcom_ramdisk2 \
     init.qcom.usb.sh \
-    init.onclite.rc \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.usb.rc \
