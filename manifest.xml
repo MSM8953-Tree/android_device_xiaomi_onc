@@ -212,6 +212,14 @@
             <name>IFingerprintSensorTest</name>
             <instance>default</instance>
         </interface>
+        <interface>
+            <name>IFingerprintSenseTouch</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFingerprintCalibration</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>

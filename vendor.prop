@@ -48,6 +48,7 @@ persist.vendor.dpmhalservice.enable=1
 drm.service.enabled=true
 
 # FRP
+persist.qfp=false
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # FS-verity
