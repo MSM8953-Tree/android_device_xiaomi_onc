@@ -1,5 +1,5 @@
 cc_defaults {
-    name: "fingerprint_service_xiaomi_msm8953_defaults",
+    name: "fingerprint_service_onclite_defaults",
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [
@@ -21,8 +21,8 @@ cc_defaults {
 }
 
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_msm8953",
-    defaults: ["fingerprint_service_xiaomi_msm8953_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_msm8953.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_msm8953.xml"],
+    name: "android.hardware.biometrics.fingerprint@2.3-service.onclite",
+    defaults: ["fingerprint_service_onclite_defaults"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.onclite.rc"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.onclite.xml"],
 }

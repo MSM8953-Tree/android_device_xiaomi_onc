@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_msm8953"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.onclite"
 
 #include <hardware/hw_auth_token.h>
 
