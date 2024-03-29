@@ -26,3 +26,10 @@ on boot
 on post-fs-data
     mkdir /data/vendor/goodix 0770 system system
     mkdir /data/vendor/fpc 0770 system system
+
+on property:sys.fp.vendor=goodix
+    setprop ro.boot.fpsensor goodix
+    setprop persist.sys.fp.vendor goodix
+
+on property:sys.fp.vendor=FPC
+    setprop ro.boot.fpsensor fpc
