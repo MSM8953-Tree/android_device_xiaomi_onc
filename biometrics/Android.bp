@@ -26,11 +26,3 @@ cc_binary {
     init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_msm8953.rc"],
     vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_msm8953.xml"],
 }
-
-cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_msm8953-32",
-    defaults: ["fingerprint_service_xiaomi_msm8953_defaults"],
-    compile_multilib: "32",
-    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_msm8953-32.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_msm8953-32.xml"],
-}
