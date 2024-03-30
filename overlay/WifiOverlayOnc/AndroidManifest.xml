@@ -4,7 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.wifi.resources.onc"
+    package="com.android.wifi.resources.onc_redmiy3"
     android:versionCode="1"
     android:versionName="1.0">
     <application android:hasCode="false" />
@@ -14,5 +14,5 @@
       android:isStatic="true"
       android:requiredSystemPropertyName="ro.boot.hwversion"
       android:requiredSystemPropertyValue="1.19.0"
-      android:priority="999"/>
+      android:priority="500"/>
 </manifest>
