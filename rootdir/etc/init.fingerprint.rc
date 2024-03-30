@@ -48,53 +48,19 @@ on post-fs-data
     mkdir /data/vendor/goodix 0770 system system
     mkdir /data/vendor/fpc 0770 system system
 
-on property:sys.fp.vendor=goodix
-    setprop ro.boot.fpsensor goodix
-    setprop persist.sys.fp.vendor goodix
-    setprop ro.hardware.fingerprint goodix
-    setprop persist.vendor.sys.fp.vendor goodix
-
-on property:sys.fp.vendor=FPC
-    setprop ro.boot.fpsensor fpc
-    setprop persist.sys.fp.vendor fpc
-    setprop ro.hardware.fingerprint fpc
-    setprop persist.vendor.sys.fp.vendor fpc
-
-on property:androidboot.fpsensor=goodix
-    setprop ro.boot.fpsensor goodix
-    setprop sys.fp.vendor goodix
-    setprop persist.sys.fp.vendor goodix
-    setprop ro.hardware.fingerprint goodix
-    setprop persist.vendor.sys.fp.vendor goodix
-
-on property:androidboot.fpsensor=fpc
-    setprop ro.boot.fpsensor fpc
-    setprop sys.fp.vendor FPC
-    setprop persist.sys.fp.vendor fpc
-    setprop ro.hardware.fingerprint fpc
-    setprop persist.vendor.sys.fp.vendor fpc
-
 on property:ro.boot.fpsensor=goodix
     setprop sys.fp.vendor goodix
     setprop persist.sys.fp.vendor goodix
     setprop ro.hardware.fingerprint goodix
     setprop persist.vendor.sys.fp.vendor goodix
 
-on property:ro.boot.fpsensor=fpc
-    setprop sys.fp.vendor FPC
-    setprop persist.sys.fp.vendor fpc
-    setprop ro.hardware.fingerprint fpc
-    setprop persist.vendor.sys.fp.vendor fpc
-
-on property:persist.vendor.sys.fp.vendor=goodix
-    setprop ro.boot.fpsensor goodix
+on property:ro.boot.fpsensor=gdx
     setprop sys.fp.vendor goodix
     setprop persist.sys.fp.vendor goodix
     setprop ro.hardware.fingerprint goodix
     setprop persist.vendor.sys.fp.vendor goodix
 
-on property:persist.vendor.sys.fp.vendor=fpc
-    setprop ro.boot.fpsensor fpc
+on property:ro.boot.fpsensor=fpc
     setprop sys.fp.vendor FPC
     setprop persist.sys.fp.vendor fpc
     setprop ro.hardware.fingerprint fpc
