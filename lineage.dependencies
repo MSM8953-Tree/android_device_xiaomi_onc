@@ -12,5 +12,12 @@
    "branch"      : "lineage-21.0",
    "clone-depth" : "1",
    "target_path" : "vendor/xiaomi/onclite"
+ },
+ {
+   "remote"      : "github",
+   "repository"  : "LineageOS/android_hardware_xiaomi",
+   "branch"      : "lineage-21.0",
+   "clone-depth" : "1",
+   "target_path" : "hardware/xiaomi"
  }
 ]

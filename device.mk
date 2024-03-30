@@ -29,6 +29,9 @@ TARGET_BOARD_SUFFIX := _64
 $(call inherit-product, vendor/xiaomi/onclite/onclite-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
+BOARD_VENDOR := xiaomi
+PRODUCT_SOONG_NAMESPACES += hardware/xiaomi
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
@@ -211,7 +214,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.onclite
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
 
 # FM
 PRODUCT_PACKAGES += \
@@ -394,6 +397,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     init.target.rc \
+    init.fingerprint.rc \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
