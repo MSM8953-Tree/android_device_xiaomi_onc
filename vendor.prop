@@ -47,8 +47,7 @@ persist.vendor.dpmhalservice.enable=1
 # DRM
 drm.service.enabled=true
 
-# FRP
-persist.qfp=false
+# Fingerprint
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # FS-verity

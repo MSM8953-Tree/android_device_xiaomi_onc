@@ -19,5 +19,12 @@
    "branch"      : "lineage-21.0",
    "clone-depth" : "1",
    "target_path" : "hardware/xiaomi"
+ },
+ {
+   "remote"      : "github",
+   "repository"  : "onclite/android_vendor_fingerprint_opensource_interfaces",
+   "branch"      : "lineage-21.0",
+   "clone-depth" : "1",
+   "target_path" : "vendor/fingerprint/opensource/interfaces"
  }
 ]

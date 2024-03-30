@@ -23,6 +23,9 @@ persist.vendor.cne.feature=1
 persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
 
+# Fingerprint
+persist.qfp=false
+
 # Graphics
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
