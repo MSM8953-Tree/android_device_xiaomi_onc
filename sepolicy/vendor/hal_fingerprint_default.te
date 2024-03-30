@@ -6,6 +6,7 @@ add_service(hal_fingerprint_default, goodix_fingerprint_vndservice);
 binder_use(hal_fingerprint_default);
 binder_call(hal_fingerprint_default, hal_perf_default);
 binder_call(hal_fingerprint_default, goodix_fingerprint_vndservice);
+binder_call(hal_fingerprint_default, keystore)
 r_dir_file(hal_fingerprint_default, firmware_file);
 set_prop(hal_fingerprint_default, vendor_fp_prop)
 get_prop(hal_fingerprint_default, vendor_fp_prop);
@@ -51,8 +52,13 @@ allow hal_fingerprint_default mnt_user_file:lnk_file { read };
 allow hal_fingerprint_default goodix_fingerprint_vndservice:service_manager add;
 
 allow hal_fingerprint_default sdcardfs:dir { search };
+allow hal_fingerprint_default sdcardfs:file { getattr };
 
 allow hal_fingerprint_default storage_file:dir { getattr search };
 allow hal_fingerprint_default storage_file:lnk_file { getattr read };
 
 allow hal_fingerprint_default rootfs:dir { read };
+
+use_keystore(hal_fingerprint_default)
+allow hal_fingerprint_default keystore:keystore_key { add_auth };
+get_prop(hal_fingerprint_default, boot_status_prop)

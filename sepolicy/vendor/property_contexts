@@ -11,14 +11,14 @@ ro.camera.                 u:object_r:camera_prop:s0
 ctl.vendor.imsrcsd         u:object_r:vendor_ctl_vendor_imsrcsservice_prop:s0
 
 # Fingerprint
-sys.fp.goodix              u:object_r:vendor_fp_prop:s0
-sys.fp.fpc                 u:object_r:vendor_fp_prop:s0
-sys.fp.vendor              u:object_r:vendor_fp_prop:s0
+sys.fp.                    u:object_r:vendor_fp_prop:s0
 persist.sys.fp.            u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp.     u:object_r:vendor_fp_prop:s0
 persist.vendor.fpc.        u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor           u:object_r:vendor_fp_prop:s0
 sys.vendor.fp.             u:object_r:vendor_fp_prop:s0
+goodix.fp.                 u:object_r:vendor_fp_prop:s0
+fpc.fp.                    u:object_r:vendor_fp_prop:s0
 
 # Thermal-Engine
 persist.sys.thermal.       u:object_r:thermal_engine_prop:s0
