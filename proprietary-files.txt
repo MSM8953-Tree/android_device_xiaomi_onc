@@ -997,19 +997,19 @@ lib64/libfm-hci.so|589e9e290acfa18a49deba33606ed158d5e7f898
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|5da074c88802633f64e2b9fe2013e2271f707e7b
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|9d27a7a6cea72a48739e741e749bff2e194d4510
 
-# Fingerprint
--vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
-vendor/etc/permissions/com.fingerprints.extension.xml
-vendor/framework/com.fingerprints.extension.jar
-vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
-vendor/lib64/com.fingerprints.extension@2.0.so
-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.goodix.default.so
-vendor/lib64/hw/fingerprint.fpc.default.so
-vendor/lib64/libgf_ca.so
-vendor/lib64/libgf_hal.so
-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
-vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+# Fingerprint - from MIUI
+-vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk|de21aab25cc4863075354dc985fb39bec02db4cf
+vendor/etc/permissions/com.fingerprints.extension.xml|de711d8827e1d321b22b60fd75a204e8928f9c6d
+vendor/framework/com.fingerprints.extension.jar|ce0107b817a630d8307c287877f4f4977451262d
+vendor/lib/vendor.qti.hardware.fingerprint@1.0.so|dc1f581c822e9b23fe1c4a3d5099dd18ef98dd96
+vendor/lib64/com.fingerprints.extension@2.0.so|152246069ad9a78bff2f11c2f97d9c53c79b63d6
+vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.goodix.default.so|2a66301d0fde2c0893f89e7c5c792ce1eac015ce
+vendor/lib64/hw/fingerprint.fpc.default.so|0093e32e1613a41bab604c516d8342f44a9e2be7
+vendor/lib64/libgf_ca.so|07394c795d15f8c3f24d7faacf6c296c2ae13e24
+vendor/lib64/libgf_hal.so|228320af75d305b2edcb74cf4b4d93f05ed3f5a5
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|218eafa5ad8f92e3626dd92143e7a8520f8a44ff
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|8b2b19a948ff2493d9c01e9401f5582fd2429397
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so|69ae7b2e6ce22e23f70caa20c340e99510409b57
 
 # Fingerprint (Patched) - from MIUI
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc|8105eb42c1aef643d4d28846307a1df20075cd56
