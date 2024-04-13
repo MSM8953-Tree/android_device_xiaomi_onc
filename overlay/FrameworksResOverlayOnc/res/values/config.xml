@@ -306,7 +306,7 @@
     <string name="config_qualified_networks_service_package">vendor.qti.iwlan</string>
 
     <!-- Specify if the fingerprint hardware support gestures-->
-    <bool name="config_fingerprintSupportsGestures">true</bool>
+    <bool name="config_fingerprintSupportsGestures">false</bool>
 
     <!-- Enable system navigation keys. -->
     <bool name="config_supportSystemNavigationKeys">true</bool>
