@@ -47,18 +47,26 @@ on boot
 on post-fs-data
     mkdir /data/vendor/goodix 0770 system system
     mkdir /data/vendor/fpc 0770 system system
+    mkdir /data/vendor/gxfp 0770 system system
+    mkdir /data/vendor/gf_data 0770 system system
+    mkdir /data/fpc 0770 system system
+    mkdir /data/goodix 0700 system system
+    mkdir /data/gf_data 0700 system system
+    mkdir /data/gxfp 0700 system system
 
 on property:ro.boot.fpsensor=goodix
     setprop sys.fp.vendor goodix
     setprop persist.sys.fp.vendor goodix
     setprop ro.hardware.fingerprint goodix
     setprop persist.vendor.sys.fp.vendor goodix
+    setprop persist.sys.fp.goodix 1
 
 on property:ro.boot.fpsensor=gdx
     setprop sys.fp.vendor goodix
     setprop persist.sys.fp.vendor goodix
     setprop ro.hardware.fingerprint goodix
     setprop persist.vendor.sys.fp.vendor goodix
+    setprop persist.sys.fp.goodix 1
 
 on property:ro.boot.fpsensor=fpc
     setprop sys.fp.vendor FPC

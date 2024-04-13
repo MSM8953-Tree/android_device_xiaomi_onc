@@ -31,7 +31,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 BOARD_VENDOR := xiaomi
 PRODUCT_SOONG_NAMESPACES += hardware/xiaomi
-PRODUCT_SOONG_NAMESPACES += vendor/fingerprint/opensource/interfaces
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
@@ -215,13 +214,12 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
+    android.hardware.biometrics.fingerprint@2.1.vendor
 
 PRODUCT_PACKAGES += \
     com.fingerprints.extension@1.0.vendor \
-    libvendor.goodix.hardware.fingerprint@1.0.vendor \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1 \
-    vendor.xiaomi.hardware.fingerprintextension@1.0
+    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
+    vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
 
 # FM
 PRODUCT_PACKAGES += \

@@ -998,13 +998,22 @@ vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|5da074c88802633f64e2b9fe2013e22
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|9d27a7a6cea72a48739e741e749bff2e194d4510
 
 # Fingerprint (Patched) - from MIUI
-vendor/lib/vendor.qti.hardware.fingerprint@1.0.so|dc1f581c822e9b23fe1c4a3d5099dd18ef98dd96
-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.goodix.default.so|2a66301d0fde2c0893f89e7c5c792ce1eac015ce
-vendor/lib64/hw/fingerprint.fpc.default.so|9f0947766bd0d8334d538d25347f25a305e9b7bd
-vendor/lib64/libgf_ca.so|07394c795d15f8c3f24d7faacf6c296c2ae13e24
-vendor/lib64/libgf_hal.so|228320af75d305b2edcb74cf4b4d93f05ed3f5a5
-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|796270627d818307ae0b26a2ead2e3e008aab2ad
-vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so|69ae7b2e6ce22e23f70caa20c340e99510409b57
+-vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk|947aa5bdb5db6144f29e17869baa9fbbdadc9fe7
+-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service|7083b553dbb5ae916526d98670f1b80a71333449
+-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc|4ec1563bf0806d58f13337eeff18697d04d7f064
+-vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml|79dda5cfe60829376b6cea76f922e1da432e67d7
+-vendor/etc/permissions/com.fingerprints.extension.xml|de711d8827e1d321b22b60fd75a204e8928f9c6d
+-vendor/framework/com.fingerprints.extension.jar|10c37dd77e3ec6f25f478af324e91310961aae08
+vendor/lib/vendor.qti.hardware.fingerprint@1.0.so|f7563af27ba327e55e69a07dbdf0f3d14b35ab4f
+-vendor/lib64/com.fingerprints.extension@2.0.so|21d0b3aba51fb39208167ecfa78c8abb9b3edf0d
+vendor/lib64/hw/fingerprint.default.so|ba8bf59d1335518b6ffcef3e6847ba35c533584c
+vendor/lib64/hw/fingerprint.fpc.default.so|02bc52637d7e228c39b50a0fc7f794121405c140
+vendor/lib64/hw/fingerprint.goodix.default.so|da39a3ee5e6b4b0d3255bfef95601890afd80709
+vendor/lib64/libgf_ca.so|c72f8fff582b2afdcf6a14790afde49c24a502ee
+vendor/lib64/libgf_hal.so|572d4904f2c333544264da6cea88b70dd89ea7bf
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|7398872ca169b938aacdbbee28027eeaacc81c0a
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|1b831905f9f37589427a84eb47d3235697f08fc7
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so|628e1ba7182774676b0f9b1bda53c09b1ea6a0be
 
 # Firmware - from MIUI (onc-user 10 QKQ1.191008.001 V12.5.1.0.QFLCNXM release-keys)
 etc/firmware/ice40.bin|a29bdcdbfda7f7dae24a3c8921abe2bcda6ae38e
