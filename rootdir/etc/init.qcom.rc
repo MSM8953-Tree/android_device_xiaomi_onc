@@ -636,7 +636,6 @@ on charger
     start qcom-post-boot
     start vendor.power_off_alarm
 
-# Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*
     setprop rild.libpath ${vendor.rild.libpath}
 
@@ -648,14 +647,6 @@ service time_daemon /vendor/bin/time_daemon
     user system
     group system
     capabilities SYS_TIME
-
-#Set GPU Opengles version
-on property:vendor.opengles.version=*
-    setprop ro.opengles.version ${vendor.opengles.version}
-
-#Set gpu available frequencies property
-on property:vendor.gpu.available_frequencies=*
-    setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class charger
@@ -674,7 +665,6 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     onrestart restart audioserver
 
-# Override the AOSP sensor HAL service definition to add input group access
 service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
     override
     class hal
@@ -683,22 +673,17 @@ service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-servi
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
 
-# Add CTS Flag For Camera
 on property:sys.camera.cts.mode=*
     setprop vendor.camera.cts.mode ${sys.camera.cts.mode}
 
-# Add CTS Verifier Flag For Camera
 on property:sys.camera.cts.verifier.mode=*
     setprop vendor.camera.cts.verifier.mode ${sys.camera.cts.verifier.mode}
 
-#workaround for camera HAL can not read sys property 
 on property:sys.camera.face.unlock=*
     setprop vendor.camera.face.unlock ${sys.camera.face.unlock}
 
-#add cts
 on property:sys.camera.cts.mode=*
    setprop vendor.camera.cts.mode ${sys.camera.cts.mode}
 
-#add cts
 on property:sys.camera.cts.verifier.mode=*
    setprop vendor.camera.cts.verifier.mode ${sys.camera.cts.verifier.mode}
