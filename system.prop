@@ -55,3 +55,39 @@ telephony.lteOnCdmaDevice=1
 
 # WFD
 persist.debug.wfd.enable=1
+
+#
+# Tweaks: Interactive Memory Management
+#
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.dex2oat-swap=false
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.heapgrowthlimit=192m
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=2m
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=16m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.madvise-random=true
+dalvik.vm.systemuicompilerfilter=speed
+debug.renderengine.backend=threaded
+debug.sf.layer_caching_active_layer_timeout_ms=1000
+debug.stagefright.ccodec=0
+persist.log.tag.OpenGLRenderer=S
+persist.sys.fuse.transcode_enabled=false
+persist.sys.fuse.transcode_user_control=true
+persist.sys.sf.color_saturation=1.0
+pm.dexopt.downgrade_after_inactive_days=10
+pm.dexopt.shared=quicken
+renderthread.skia.reduceopstasksplitting=true
+ro.hwui.render_ahead=20
+ro.lmk.critical_upgrade=true
+ro.lmk.downgrade_pressure=40
+ro.lmk.kill_heaviest_task=false
+ro.lmk.thrashing_limit_decay=50
+ro.lmk.upgrade_pressure=30
+ro.lmk.use_minfree_levels=false
+ro.lmk.use_psi=true
+ro.vendor.qti.am.reschedule_service=true
+ro.vendor.qti.sys.fw.bservice_enable=true
