@@ -1,44 +1,44 @@
-ro.alarm_boot              u:object_r:vendor_alarm_boot_prop:s0
-sys.listeners.registered   u:object_r:vendor_tee_listener_prop:s0
-sys.post_boot.parsed       u:object_r:vendor_mpctl_prop:s0
-persist.net.doxlat         u:object_r:vendor_xlat_prop:s0
-#
-camera.                    u:object_r:camera_prop:s0
-persist.camera.            u:object_r:camera_prop:s0
-persist.cam.               u:object_r:camera_prop:s0
-ro.camera.                 u:object_r:camera_prop:s0
-ro.cam.                    u:object_r:camera_prop:s0
-sys.cam.                   u:object_r:camera_prop:s0
-sys.camera.                u:object_r:camera_prop:s0
-persist.sys.camera.        u:object_r:camera_prop:s0
-persist.sys.cam.           u:object_r:camera_prop:s0
-#
-ctl.vendor.imsrcsd         u:object_r:vendor_ctl_vendor_imsrcsservice_prop:s0
+ro.alarm_boot                  u:object_r:vendor_alarm_boot_prop:s0
+sys.listeners.registered       u:object_r:vendor_tee_listener_prop:s0
+sys.post_boot.parsed           u:object_r:vendor_mpctl_prop:s0
+persist.net.doxlat             u:object_r:vendor_xlat_prop:s0
+
+camera.                        u:object_r:camera_prop:s0
+persist.camera.                u:object_r:camera_prop:s0
+persist.cam.                   u:object_r:camera_prop:s0
+ro.camera.                     u:object_r:camera_prop:s0
+ro.cam.                        u:object_r:camera_prop:s0
+sys.cam.                       u:object_r:camera_prop:s0
+sys.camera.                    u:object_r:camera_prop:s0
+persist.sys.camera.            u:object_r:camera_prop:s0
+persist.sys.cam.               u:object_r:camera_prop:s0
+
+ctl.vendor.imsrcsd             u:object_r:vendor_ctl_vendor_imsrcsservice_prop:s0
 
 # Fingerprint
-sys.fp.                    u:object_r:vendor_fp_prop:s0
-persist.sys.fp.            u:object_r:vendor_fp_prop:s0
-persist.vendor.sys.fp.     u:object_r:vendor_fp_prop:s0
-persist.vendor.fpc.        u:object_r:vendor_fp_prop:s0
-ro.boot.fpsensor           u:object_r:vendor_fp_prop:s0
-sys.vendor.fp.             u:object_r:vendor_fp_prop:s0
-goodix.fp.                 u:object_r:vendor_fp_prop:s0
-fpc.fp.                    u:object_r:vendor_fp_prop:s0
-ro.hardware.fingerprint    u:object_r:vendor_fp_prop:s0
+sys.fp.                        u:object_r:vendor_fp_prop:s0
+persist.sys.fp.                u:object_r:vendor_fp_prop:s0
+persist.vendor.sys.fp.         u:object_r:vendor_fp_prop:s0
+persist.vendor.fpc.            u:object_r:vendor_fp_prop:s0
+ro.boot.fpsensor               u:object_r:vendor_fp_prop:s0
+sys.vendor.fp.                 u:object_r:vendor_fp_prop:s0
+goodix.fp.                     u:object_r:vendor_fp_prop:s0
+fpc.fp.                        u:object_r:vendor_fp_prop:s0
+ro.hardware.fingerprint        u:object_r:vendor_fp_prop:s0
 
 # Thermal-Engine
-persist.sys.thermal.       u:object_r:thermal_engine_prop:s0
-sys.thermal.               u:object_r:thermal_engine_prop:s0
+persist.sys.thermal.           u:object_r:thermal_engine_prop:s0
+sys.thermal.                   u:object_r:thermal_engine_prop:s0
 
 # Wifi
-vendor.wlan.driver.        u:object_r:vendor_wifi_config:s0
+vendor.wlan.driver.            u:object_r:vendor_wifi_config:s0
 
 # Vendor camera
-persist.vendor.camera.                       u:object_r:vendor_camera_prop:s0
-persist.vendor.vidhance.                     u:object_r:vendor_camera_prop:s0
-vendor.camera.                               u:object_r:vendor_camera_prop:s0
-persist.vendor.cam.                          u:object_r:vendor_camera_prop:s0
-persist.sys.vendor.camera.                   u:object_r:vendor_camera_prop:s0
-persist.sys.vendor.cam.                      u:object_r:vendor_camera_prop:s0
-ro.vendor.cam.                               u:object_r:vendor_camera_prop:s0
-ro.vendor.camera.                            u:object_r:vendor_camera_prop:s0
+persist.vendor.camera.         u:object_r:vendor_camera_prop:s0
+persist.vendor.vidhance.       u:object_r:vendor_camera_prop:s0
+vendor.camera.                 u:object_r:vendor_camera_prop:s0
+persist.vendor.cam.            u:object_r:vendor_camera_prop:s0
+persist.sys.vendor.camera.     u:object_r:vendor_camera_prop:s0
+persist.sys.vendor.cam.        u:object_r:vendor_camera_prop:s0
+ro.vendor.cam.                 u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.              u:object_r:vendor_camera_prop:s0
