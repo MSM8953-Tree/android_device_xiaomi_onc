@@ -40,3 +40,4 @@ vendor.camera.                               u:object_r:vendor_camera_prop:s0
 persist.vendor.cam.                          u:object_r:vendor_camera_prop:s0
 persist.sys.vendor.camera.                   u:object_r:vendor_camera_prop:s0
 persist.sys.vendor.cam.                      u:object_r:vendor_camera_prop:s0
+ro.vendor.cam.                               u:object_r:vendor_camera_prop:s0
