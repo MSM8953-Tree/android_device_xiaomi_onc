@@ -35,7 +35,7 @@ vendor.wlan.driver.        u:object_r:vendor_wifi_config:s0
 
 # Vendor camera
 persist.vendor.camera.                       u:object_r:vendor_camera_prop:s0
-persist.vendor.vidhance.dmbr.mode            u:object_r:vendor_camera_prop:s0
+persist.vendor.vidhance.                     u:object_r:vendor_camera_prop:s0
 vendor.camera.                               u:object_r:vendor_camera_prop:s0
 persist.vendor.cam.                          u:object_r:vendor_camera_prop:s0
 persist.sys.vendor.camera.                   u:object_r:vendor_camera_prop:s0
