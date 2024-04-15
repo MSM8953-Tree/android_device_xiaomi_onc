@@ -62,3 +62,5 @@ allow hal_fingerprint_default rootfs:dir { read };
 use_keystore(hal_fingerprint_default)
 allow hal_fingerprint_default keystore:keystore_key { add_auth };
 get_prop(hal_fingerprint_default, boot_status_prop)
+
+allow hal_fingerprint_default proc:file { open read write };
