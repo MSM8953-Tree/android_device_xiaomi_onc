@@ -25,6 +25,7 @@ sys.vendor.fp.                 u:object_r:vendor_fp_prop:s0
 goodix.fp.                     u:object_r:vendor_fp_prop:s0
 fpc.fp.                        u:object_r:vendor_fp_prop:s0
 ro.hardware.fingerprint        u:object_r:vendor_fp_prop:s0
+ro.hardware.fp.                u:object_r:vendor_fp_prop:s0
 
 # Thermal-Engine
 persist.sys.thermal.           u:object_r:thermal_engine_prop:s0
