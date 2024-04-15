@@ -53,6 +53,7 @@ on post-fs-data
     mkdir /data/goodix 0700 system system
     mkdir /data/gf_data 0700 system system
     mkdir /data/gxfp 0700 system system
+    mkdir /data/system/fingerprint 0700 system system
 
 on property:ro.boot.fpsensor=goodix
     setprop sys.fp.vendor goodix
