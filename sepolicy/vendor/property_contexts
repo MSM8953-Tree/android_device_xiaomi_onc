@@ -26,7 +26,7 @@ persist.sys.thermal.       u:object_r:thermal_engine_prop:s0
 sys.thermal.               u:object_r:thermal_engine_prop:s0
 
 # Wifi
-vendor.wlan.driver.config       u:object_r:vendor_wifi_config:s0
+vendor.wlan.driver.        u:object_r:vendor_wifi_config:s0
 
 # Vendor camera
 persist.vendor.camera.                       u:object_r:vendor_camera_prop:s0
