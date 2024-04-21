@@ -3,3 +3,9 @@ allow hal_gnss_qti self:capability { setuid setgid net_bind_service };
 
 # xtra-daemon control
 get_prop(hal_gnss_qti, xtra_control_prop)
+
+get_prop(hal_gnss_default, default_prop)
+get_prop(hal_gnss_default, system_prop)
+
+allow hal_gnss_default system_file:file { open read write setattr getattr map };
+allow hal_gnss_default ssr_device:chr_file { open read write setattr getattr map ioctl };
