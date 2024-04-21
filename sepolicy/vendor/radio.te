@@ -3,6 +3,8 @@ allow radio { cameraserver_service mediaextractor_service mediaserver_service me
 allow radio self:socket create_socket_perms;
 allowxperm radio self:socket ioctl msm_sock_ipc_ioctls;
 
+allow radio rild:unix_stream_socket connectto;
+
 binder_call(radio, cnd)
 binder_call(radio, gpuservice)
 binder_call(radio, hal_imsrtp)
