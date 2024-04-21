@@ -28,6 +28,8 @@ TARGET_BOARD_SUFFIX := _64
 
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
 
+PRODUCT_PACKAGES += FMRadioExclude
+
 $(call inherit-product, vendor/xiaomi/onclite/onclite-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
