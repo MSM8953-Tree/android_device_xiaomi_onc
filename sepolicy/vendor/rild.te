@@ -1,2 +1,22 @@
 # Allow binder communication with qtidataservices_app
 binder_call(rild, qtidataservices_app)
+
+get_prop(rild, config_prop)
+get_prop(rild, default_prop)
+set_prop(rild, default_prop)
+get_prop(rild, system_prop)
+set_prop(rild, net_radio_prop)
+get_prop(rild, vendor_rild_libpath_prop)
+get_prop(rild, vold_prop)
+
+allow rild device:chr_file { ioctl open read };
+allow rild proc_net:file write;
+allow rild proc_qtaguid_stat:file { open read getattr };
+allow rild radio_core_data_file:dir { open read add_name getattr remove_name search write };
+allow rild radio_core_data_file:file { create open read setattr unlink write getattr ioctl lock };
+allow rild sysfs:file write;
+allow rild system_data_file:dir search;
+allow rild system_data_file:lnk_file read;
+allow rild system_data_file:dir getattr;
+allow rild system_userdir_file:dir { search getattr };
+allow rild radio_data_file:lnk_file getattr;
