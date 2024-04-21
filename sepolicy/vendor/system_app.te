@@ -10,3 +10,11 @@ binder_call(system_app, hal_health_default)
 binder_call(system_app, hal_lineage_health_default)
 binder_call(system_app, hal_wifi_default)
 binder_call(system_app, hal_wifi_supplicant_default)
+binder_call(system_app, hal_wifi_hostapd_default)
+binder_call(system_app, netd)
+binder_call(system_app, wificond)
+
+allow system_app privapp_data_file:dir search;
+allow system_app sysfs:file { write open getattr };
+allow system_app sysfs_rtc:dir search;
+allow system_app sysfs_rtc:file { open read getattr };
