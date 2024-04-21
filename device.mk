@@ -346,6 +346,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
 PRODUCT_PACKAGES += \
+   android.media.audio.common.types-V2-cpp \
    libavservices_minijail \
    libavservices_minijail.vendor
 
