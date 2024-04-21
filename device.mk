@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += FMRadioExclude
 
 $(call inherit-product, vendor/xiaomi/onclite/onclite-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 BOARD_VENDOR := xiaomi
 PRODUCT_SOONG_NAMESPACES += hardware/xiaomi
