@@ -1,2 +1,6 @@
 #xtra-demon
 hal_client_domain(location, vendor_qccsyshal);
+
+get_prop(location, default_prop)
+
+allow location system_file:file { getattr open read };
