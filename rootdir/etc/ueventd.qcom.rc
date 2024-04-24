@@ -522,3 +522,6 @@ subsystem mem_buf_vm
 
 # socinfo
 /sys/devices/soc0           serial_number            0000    root    root
+
+# Health HAL
+/sys/class/power_supply/battery input_suspend   0660    system  system

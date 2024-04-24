@@ -626,7 +626,7 @@ service vendor.msm_irqbal_lb /vendor/bin/msm_irqbalance -f /system/vendor/etc/ms
     group root
     disabled
 
-on charger
+on property:init.svc.vendor.charger=running
     start qcom-post-boot
     start vendor.power_off_alarm
 
