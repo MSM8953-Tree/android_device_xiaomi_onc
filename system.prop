@@ -80,13 +80,6 @@ pm.dexopt.downgrade_after_inactive_days=10
 pm.dexopt.shared=quicken
 renderthread.skia.reduceopstasksplitting=true
 ro.hwui.render_ahead=20
-ro.lmk.critical_upgrade=true
-ro.lmk.downgrade_pressure=40
-ro.lmk.kill_heaviest_task=false
-ro.lmk.thrashing_limit_decay=50
-ro.lmk.upgrade_pressure=30
-ro.lmk.use_minfree_levels=false
-ro.lmk.use_psi=true
 ro.vendor.qti.am.reschedule_service=true
 ro.vendor.qti.sys.fw.bservice_enable=true
 
