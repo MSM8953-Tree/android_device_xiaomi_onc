@@ -188,8 +188,11 @@ PRODUCT_PACKAGES += \
     libwifi-hal-ctrl
 
 # Health HAL
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1.vendor \
+    vendor.lineage.health-service.default \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery
 
