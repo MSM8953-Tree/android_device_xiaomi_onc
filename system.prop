@@ -40,6 +40,12 @@ vendor.vidc.dec.downscalar_height=1088
 vendor.vidc.dec.downscalar_width=1920
 vendor.vidc.enc.disable_bframes=1
 vendor.video.disable.ubwc=1
+media.msm8956hw=0
+mm.enable.smoothstreaming=true
+mmp.enable.3g2=true
+media.aac_51_output_enabled=true
+av.debug.disable.pers.cache=1
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
