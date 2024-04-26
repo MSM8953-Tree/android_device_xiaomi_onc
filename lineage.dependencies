@@ -16,7 +16,7 @@
  {
    "remote"      : "github",
    "repository"  : "LineageOS/android_hardware_xiaomi",
-   "branch"      : "lineage-21.0",
+   "branch"      : "lineage-21",
    "clone-depth" : "1",
    "target_path" : "hardware/xiaomi"
  }
