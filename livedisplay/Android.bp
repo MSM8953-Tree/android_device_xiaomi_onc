@@ -34,6 +34,7 @@ cc_defaults {
 cc_binary {
     name: "vendor.lineage.livedisplay@2.0-service.xiaomi_onc",
     init_rc: ["vendor.lineage.livedisplay@2.0-service.xiaomi_onc.rc"],
+    vintf_fragments: ["vendor.lineage.livedisplay@2.0-service.xiaomi_onc.xml"],
     defaults: ["livedisplay_onc_defaults"],
     vendor: true,
 }
