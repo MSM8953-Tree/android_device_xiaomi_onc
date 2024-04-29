@@ -157,13 +157,16 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libldacBT_bco \
     audio.bluetooth.default \
     android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio-impl \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/libldacBT_bco:$(TARGET_COPY_OUT_VENDOR)/lib/libldacBT_bco.so \
+    $(LOCAL_PATH)/configs/libldacBT_bco:$(TARGET_COPY_OUT_VENDOR)/lib64/libldacBT_bco.so
 
 # Camera
 PRODUCT_PACKAGES += \
