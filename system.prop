@@ -234,9 +234,6 @@ persist.vendor.camera.display.lmax=1280x720
 #expose aux camera for below packages
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 
-#set cutoff voltage to 3400mV
-ro.cutoff_voltage_mv=3400
-
 # enable temp dds
 persist.vendor.radio.enable_temp_dds=true
 
