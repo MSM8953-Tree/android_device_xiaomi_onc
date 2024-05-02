@@ -145,7 +145,6 @@ persist.vendor.btstack.avrcp-playstatus.blacklist=true
 
 # System property for cabl
 ro.qualcomm.cabl=0
-ro.vendor.display.cabl=0
 
 #
 # System props for telephony
