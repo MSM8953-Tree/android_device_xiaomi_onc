@@ -1,0 +1,1 @@
+allow storaged sysfs:file { open read write setattr getattr map };
