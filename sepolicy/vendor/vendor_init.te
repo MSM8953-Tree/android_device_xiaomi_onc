@@ -63,3 +63,6 @@ set_prop(vendor_init, vendor_camera_prop)
 
 get_prop(vendor_init, default_prop)
 set_prop(vendor_init, default_prop)
+
+get_prop(vendor_init, radio_prop)
+set_prop(vendor_init, radio_prop)
