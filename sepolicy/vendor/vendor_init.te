@@ -32,7 +32,6 @@ allow vendor_init {
   vendor_camera_data_file
   vendor_time_data_file
   wifi_data_file
-  vendor_fm_prop
   sysfs_kernel_sdhci_msm
   shell_prop
   system_prop
@@ -66,3 +65,6 @@ set_prop(vendor_init, default_prop)
 
 get_prop(vendor_init, radio_prop)
 set_prop(vendor_init, radio_prop)
+
+get_prop(vendor_init, vendor_fm_prop)
+set_prop(vendor_init, vendor_fm_prop)
