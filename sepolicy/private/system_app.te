@@ -1,2 +1,4 @@
+binder_call(system_app, storaged)
+
 # Allow Cast Settings to access WFD prop
 get_prop(system_app, wfd_debug_prop)
