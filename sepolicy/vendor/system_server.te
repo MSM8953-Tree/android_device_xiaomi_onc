@@ -8,12 +8,12 @@ r_dir_file(system_server, keylayout_file);
 get_prop(system_server, vendor_fp_prop);
 
 # Alarm
-allow system_server vendor_alarm_boot_prop:file { read open getattr };
+allow system_server vendor_alarm_boot_prop:file { open read write setattr getattr map ioctl relabelfrom };
 
 # Proc
-allow system_server proc:file { getattr read open };
+allow system_server proc:file { open read write setattr getattr map ioctl relabelfrom };
 
 # Health HAL
 r_dir_file(system_server, sysfs_battery_supply)
 allow system_server sysfs_battery_supply:dir { search };
-allow system_server sysfs_battery_supply:file { open read getattr };
+allow system_server sysfs_battery_supply:file { open read write setattr getattr map ioctl relabelfrom };

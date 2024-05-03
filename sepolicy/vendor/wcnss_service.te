@@ -2,4 +2,4 @@ allow wcnss_service property_socket:sock_file { write };
 allow wcnss_service init:unix_stream_socket { connectto };
 set_prop(wcnss_service, vendor_wifi_config)
 get_prop(wcnss_service, vendor_wifi_config)
-dontaudit wcnss_service serialno_prop:file { getattr open read };
+dontaudit wcnss_service serialno_prop:file { open read write setattr getattr map ioctl relabelfrom };

@@ -22,4 +22,4 @@ allow system_app sysfs_rtc:file { open read getattr };
 # Health HAL
 r_dir_file(system_app, sysfs_battery_supply)
 allow system_app sysfs_battery_supply:dir { search };
-allow system_app sysfs_battery_supply:file { open read getattr };
+allow system_app sysfs_battery_supply:file { open read write setattr getattr map ioctl relabelfrom };

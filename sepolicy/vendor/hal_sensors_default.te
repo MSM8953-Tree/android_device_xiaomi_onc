@@ -7,12 +7,12 @@ allow hal_sensors_default persist_file:dir { getattr search };
 
 get_prop(hal_sensors_default, default_prop)
 
-allow hal_sensors_default iio_device:chr_file { open read ioctl };
+allow hal_sensors_default iio_device:chr_file { open read write setattr getattr map ioctl relabelfrom };
 
 allow hal_sensors_default sysfs:dir { open read };
 
-allow hal_sensors_default sysfs:file { getattr open read write };
+allow hal_sensors_default sysfs:file { open read write setattr getattr map ioctl relabelfrom };
 
 allow hal_sensors_default sysfs_graphics:dir search;
 
-allow hal_sensors_default sysfs_graphics:file { getattr open read };
+allow hal_sensors_default sysfs_graphics:file { open read write setattr getattr map ioctl relabelfrom };
