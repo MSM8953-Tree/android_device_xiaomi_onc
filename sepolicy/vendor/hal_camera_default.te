@@ -10,3 +10,6 @@ allow hal_camera_default default_prop:file { open read write setattr getattr map
 
 get_prop(hal_camera_default, camera_prop)
 set_prop(hal_camera_default, camera_prop)
+
+get_prop(hal_camera_default, vendor_camera_prop)
+set_prop(hal_camera_default, vendor_camera_prop)
