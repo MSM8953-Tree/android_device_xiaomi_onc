@@ -1,1 +1,31 @@
-allow storaged sysfs:file { open read write setattr getattr map ioctl relabelfrom };
+allow storaged {
+  sysfs
+  mnt_user_file
+  sdcardfs
+  storage_file
+  proc
+  media_rw_data_file
+  device
+  system_data_file
+}:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+
+allow storaged {
+  sysfs
+  mnt_user_file
+  sdcardfs
+  storage_file
+  proc
+  media_rw_data_file
+  device
+  system_data_file
+}:file { create open read write setattr getattr map ioctl relabelfrom };
+
+
+allow storaged {
+  sysfs
+  mnt_user_file
+  storage_file
+  system_data_file
+}:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
+
+allow storaged rootfs:dir { open read search getattr };

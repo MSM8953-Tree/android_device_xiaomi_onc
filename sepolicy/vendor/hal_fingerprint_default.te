@@ -13,17 +13,18 @@ get_prop(hal_fingerprint_default, vendor_fp_prop);
 vndbinder_use(hal_fingerprint_default);
 
 # access to /data/system/users/[0-9]+/fpdata
-allow hal_fingerprint_default fingerprint_data_file:dir rw_dir_perms;
-allow hal_fingerprint_default fingerprint_data_file:dir create_dir_perms;
-allow hal_fingerprint_default fingerprint_data_file:file create_file_perms;
+allow hal_fingerprint_default fingerprint_data_file:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_fingerprint_default fingerprint_data_file:file { create open read write setattr getattr map ioctl relabelfrom };
 
-allow hal_fingerprint_default fingerprintd_data_file:dir rw_dir_perms;
-allow hal_fingerprint_default fingerprintd_data_file:dir create_dir_perms;
-allow hal_fingerprint_default fingerprintd_data_file:file create_file_perms;
+allow hal_fingerprint_default fingerprintd_data_file:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_fingerprint_default fingerprintd_data_file:file { create open read write setattr getattr map ioctl relabelfrom };
 
 allow hal_fingerprint_default persist_drm_file:dir rw_dir_perms;
 allow hal_fingerprint_default persist_drm_file:dir create_dir_perms;
 allow hal_fingerprint_default persist_drm_file:file create_file_perms;
+
+allow hal_fingerprint_default input_device:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_fingerprint_default input_device:file { create open read write setattr getattr map ioctl relabelfrom };
 
 allow hal_fingerprint_default {
     fingerprint_device
@@ -31,6 +32,7 @@ allow hal_fingerprint_default {
     vndbinder_device
     uhid_device
     ion_device
+    input_device
 }:chr_file rw_file_perms;
 
 allow hal_fingerprint_default {
@@ -39,38 +41,56 @@ allow hal_fingerprint_default {
     vndbinder_device
     uhid_device
     ion_device
-}:chr_file { ioctl };
+    input_device
+}:chr_file { getattr setattr ioctl };
 
-allow hal_fingerprint_default fingerprint_sysfs:file rw_file_perms;
-allow hal_fingerprint_default fingerprint_sysfs:file { ioctl };
-allow hal_fingerprint_default fingerprint_sysfs:dir r_dir_perms;
+allow hal_fingerprint_default fingerprint_sysfs:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_fingerprint_default fingerprint_sysfs:file { create open read write setattr getattr map ioctl relabelfrom };
 
 allow hal_fingerprint_default property_socket:sock_file write;
+
 allow hal_fingerprint_default init:unix_stream_socket connectto;
+
 allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
 allow hal_fingerprint_default self:netlink_generic_socket create_socket_perms_no_ioctl;
 allow hal_fingerprint_default self:socket create_socket_perms_no_ioctl;
-allow hal_fingerprint_default self:netlink_socket { read };
-allow hal_fingerprint_default self:netlink_generic_socket { read };
-allow hal_fingerprint_default self:socket { read };
+allow hal_fingerprint_default self:netlink_socket { read create bind write };
+allow hal_fingerprint_default self:netlink_generic_socket { read create bind write };
+allow hal_fingerprint_default self:socket { read create bind write };
 
-allow hal_fingerprint_default system_data_file:dir create_dir_perms;
+allow hal_fingerprint_default system_data_file:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_fingerprint_default system_data_file:file { create open read write setattr getattr map ioctl relabelfrom };
+
 allow hal_fingerprint_default hal_perf_hwservice:hwservice_manager find;
 
-allow hal_fingerprint_default mnt_user_file:dir { search };
-allow hal_fingerprint_default mnt_user_file:lnk_file { read };
+allow hal_fingerprint_default mnt_user_file:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_fingerprint_default mnt_user_file:file { create open read write setattr getattr map ioctl relabelfrom };
+allow hal_fingerprint_default mnt_user_file:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
+
 allow hal_fingerprint_default goodix_fingerprint_vndservice:service_manager add;
 
-allow hal_fingerprint_default sdcardfs:dir { search };
-allow hal_fingerprint_default sdcardfs:file { getattr };
+allow hal_fingerprint_default sdcardfs:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_fingerprint_default sdcardfs:file { create open read write setattr getattr map ioctl relabelfrom };
 
-allow hal_fingerprint_default storage_file:dir { getattr search };
-allow hal_fingerprint_default storage_file:lnk_file { getattr read };
+allow hal_fingerprint_default storage_file:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_fingerprint_default storage_file:file { create open read write setattr getattr map ioctl relabelfrom };
+allow hal_fingerprint_default storage_file:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
 
-allow hal_fingerprint_default rootfs:dir { read };
+allow hal_fingerprint_default rootfs:dir { open read search getattr };
 
 use_keystore(hal_fingerprint_default)
 allow hal_fingerprint_default keystore:keystore_key { add_auth };
 get_prop(hal_fingerprint_default, boot_status_prop)
 
-allow hal_fingerprint_default proc:file { open read write setattr getattr map ioctl relabelfrom };
+allow hal_fingerprint_default proc:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_fingerprint_default proc:file { create open read write setattr getattr map ioctl relabelfrom };
+
+allow hal_fingerprint_default media_rw_data_file:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_fingerprint_default media_rw_data_file:file { create open read write setattr getattr map ioctl relabelfrom };
+
+allow hal_fingerprint_default sysfs:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_fingerprint_default sysfs:file { create open read write setattr getattr map ioctl relabelfrom };
+allow hal_fingerprint_default sysfs:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
+
+allow hal_fingerprint_default device:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_fingerprint_default device:file { create open read write setattr getattr map ioctl relabelfrom };
