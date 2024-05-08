@@ -59,6 +59,7 @@ vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 vendor.audio_hal.period_size=192
 vendor.display.disable_rotator_downscale=1
+vendor.display.disable_scaler=1
 vendor.hw.fm.init=0
 vendor.qcom.bluetooth.soc=pronto
 vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
