@@ -6,10 +6,11 @@ allow hal_camera_default camera_data_file:sock_file write;
 allow hal_camera_default camera_data_file:dir create_dir_perms;
 allow hal_camera_default camera_data_file:file create_file_perms;
 
-allow hal_camera_default default_prop:file { open read write setattr getattr map ioctl relabelfrom };
-
 get_prop(hal_camera_default, camera_prop)
 set_prop(hal_camera_default, camera_prop)
 
 get_prop(hal_camera_default, vendor_camera_prop)
 set_prop(hal_camera_default, vendor_camera_prop)
+
+get_prop(hal_camera_default, default_prop)
+set_prop(hal_camera_default, default_prop)
