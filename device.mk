@@ -30,6 +30,8 @@ PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
 
 PRODUCT_PACKAGES += FMRadioExclude
 
+PRODUCT_PACKAGES += BatteryResOnc
+
 $(call inherit-product, vendor/xiaomi/onclite/onclite-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
