@@ -19,5 +19,12 @@
    "branch"      : "lineage-21",
    "clone-depth" : "1",
    "target_path" : "hardware/xiaomi"
+ },
+ {
+   "remote"      : "github",
+   "repository"  : "hadadarjt/proton-clang",
+   "branch"      : "20210123",
+   "clone-depth" : "1",
+   "target_path" : "prebuilts/clang/kernel/linux-x86/clang-proton"
  }
 ]
