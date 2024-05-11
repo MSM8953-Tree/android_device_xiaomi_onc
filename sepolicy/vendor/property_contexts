@@ -9,6 +9,7 @@ sys.camera.                u:object_r:camera_prop:s0
 persist.sys.camera.        u:object_r:camera_prop:s0
 
 # Vendor Camera
+vendor.camera.             u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.     u:object_r:vendor_camera_prop:s0
 persist.vendor.vidhance.   u:object_r:vendor_camera_prop:s0
 
