@@ -5,6 +5,7 @@ persist.net.doxlat         u:object_r:vendor_xlat_prop:s0
 # System Camera
 camera.                    u:object_r:camera_prop:s0
 persist.camera.            u:object_r:camera_prop:s0
+sys.camera.                u:object_r:camera_prop:s0
 
 # Vendor Camera
 persist.vendor.camera.     u:object_r:camera_prop:s0
