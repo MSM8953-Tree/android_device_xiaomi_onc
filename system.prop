@@ -20,12 +20,15 @@ DEVICE_PROVISIONED=1
 #
 ro.telephony.default_network=22,22
 
+service.qti.ims.enabled=1
+
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=0
 debug.sf.latch_unsignaled=1
 debug.sf.auto_latch_unsignaled=0
 debug.egl.hw=0
 debug.hwui.renderer=vulkan
+debug.hwui.skia_atrace_enabled=false
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
 dev.pm.dyn_samplingrate=1
@@ -123,7 +126,7 @@ dalvik.vm.heapminfree=4m
 dalvik.vm.heapmaxfree=8m
 dalvik.vm.madvise-random=true
 dalvik.vm.systemuicompilerfilter=speed
-debug.renderengine.backend=threaded
+debug.renderengine.backend=skiaglthreaded
 persist.log.tag.OpenGLRenderer=S
 persist.log.tag.SDM=WARNING
 persist.sys.fuse.transcode_enabled=false
@@ -138,6 +141,8 @@ ro.lmk.use_minfree_levels=false
 ro.lmk.use_psi=true
 ro.vendor.qti.am.reschedule_service=true
 ro.vendor.qti.sys.fw.bservice_enable=true
+ro.egl.blobcache.multifile=true
+ro.egl.blobcache.multifile_limit=33554432
 
 #system prop for Bluetooth SOC type
 vendor.bluetooth.soc=pronto
