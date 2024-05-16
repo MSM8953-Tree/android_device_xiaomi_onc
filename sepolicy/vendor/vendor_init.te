@@ -48,6 +48,10 @@ allow vendor_init {
   sysfs
 }:file { create getattr open read setattr ioctl write relabelfrom map };
 
+allow vendor_init device:chr_file rw_file_perms;
+
+allow vendor_init device:chr_file { getattr setattr ioctl };
+
 allow vendor_init radio_data_file:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
 
 allow vendor_init kernel:security check_context;

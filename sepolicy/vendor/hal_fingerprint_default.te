@@ -27,6 +27,7 @@ allow hal_fingerprint_default input_device:dir { create search getattr open read
 allow hal_fingerprint_default input_device:file { create open read write setattr getattr map ioctl relabelfrom };
 
 allow hal_fingerprint_default {
+    device
     fingerprint_device
     tee_device
     vndbinder_device
@@ -36,6 +37,7 @@ allow hal_fingerprint_default {
 }:chr_file rw_file_perms;
 
 allow hal_fingerprint_default {
+    device
     fingerprint_device
     tee_device
     vndbinder_device

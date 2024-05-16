@@ -20,7 +20,6 @@ allow storaged {
   system_data_file
 }:file { create open read write setattr getattr map ioctl relabelfrom };
 
-
 allow storaged {
   sysfs
   mnt_user_file
@@ -29,3 +28,7 @@ allow storaged {
 }:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
 
 allow storaged rootfs:dir { open read search getattr };
+
+allow storaged device:chr_file rw_file_perms;
+
+allow storaged device:chr_file { getattr setattr ioctl };
