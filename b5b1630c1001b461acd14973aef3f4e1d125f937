@@ -33,6 +33,24 @@
       "message": "This should be updated like picks of this patch",
       "revId": "b5b1630c1001b461acd14973aef3f4e1d125f937",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b1cf8ac_4e1aa057",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 527,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-05-21T15:38:28Z",
+      "side": 1,
+      "message": "Not only in this change. Looks like more changes on this chain have wrong ids.",
+      "parentUuid": "48d802fe_6f323b07",
+      "revId": "b5b1630c1001b461acd14973aef3f4e1d125f937",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
