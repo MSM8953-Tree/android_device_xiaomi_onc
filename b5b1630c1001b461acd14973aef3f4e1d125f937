@@ -16,6 +16,23 @@
       "message": "Fix change ID. I59c23e7974cea1174b0161f31a535fa3afa1e5c9",
       "revId": "b5b1630c1001b461acd14973aef3f4e1d125f937",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48d802fe_6f323b07",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 527,
+      "author": {
+        "id": 24334
+      },
+      "writtenOn": "2024-05-21T15:23:19Z",
+      "side": 1,
+      "message": "This should be updated like picks of this patch",
+      "revId": "b5b1630c1001b461acd14973aef3f4e1d125f937",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
