@@ -51,6 +51,24 @@
       "parentUuid": "48d802fe_6f323b07",
       "revId": "b5b1630c1001b461acd14973aef3f4e1d125f937",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b0f7309_5806bc00",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 527,
+      "author": {
+        "id": 24334
+      },
+      "writtenOn": "2024-05-21T15:52:07Z",
+      "side": 1,
+      "message": "Yes seen. Asked him to re-upload with correct ids.",
+      "parentUuid": "1b1cf8ac_4e1aa057",
+      "revId": "b5b1630c1001b461acd14973aef3f4e1d125f937",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
