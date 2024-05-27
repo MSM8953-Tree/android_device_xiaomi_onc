@@ -32,6 +32,8 @@ PRODUCT_PACKAGES += FMRadioExclude
 
 PRODUCT_PACKAGES += BatteryResOnc
 
+PRODUCT_PACKAGES += CertifiedPropsOverlay
+
 $(call inherit-product, vendor/xiaomi/onclite/onclite-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
