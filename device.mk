@@ -463,7 +463,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     init.target.rc \
-    init.fingerprint.rc \
+    init.xiaomi.rc \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
