@@ -75,4 +75,7 @@
         <item>com.google.android.apps.cameralite</item>
         <item>com.google.android.GoogleCameraEng</item>
     </string-array>
+
+    <!-- Whether to cancel fingerprint operation if not idle -->
+    <bool name="config_fpCancelIfNotIdle">true</bool>
 </resources>
