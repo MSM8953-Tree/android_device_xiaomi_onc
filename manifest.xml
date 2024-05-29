@@ -201,6 +201,14 @@
         <transport>hwbinder</transport>
         <version>2.0</version>
         <interface>
+            <name>IFingerprintAuthenticator</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFingerprintCalibration</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
             <name>IFingerprintEngineering</name>
             <instance>default</instance>
         </interface>
@@ -209,7 +217,7 @@
             <instance>default</instance>
         </interface>
         <interface>
-            <name>IFingerprintSensorTest</name>
+            <name>IFingerprintRecalibration</name>
             <instance>default</instance>
         </interface>
         <interface>
@@ -217,9 +225,16 @@
             <instance>default</instance>
         </interface>
         <interface>
-            <name>IFingerprintCalibration</name>
+            <name>IFingerprintSensorTest</name>
             <instance>default</instance>
         </interface>
+        <fqname>@2.0::IFingerprintAuthenticator/default</fqname>
+        <fqname>@2.0::IFingerprintCalibration/default</fqname>
+        <fqname>@2.0::IFingerprintEngineering/default</fqname>
+        <fqname>@2.0::IFingerprintNavigation/default</fqname>
+        <fqname>@2.0::IFingerprintRecalibration/default</fqname>
+        <fqname>@2.0::IFingerprintSenseTouch/default</fqname>
+        <fqname>@2.0::IFingerprintSensorTest/default</fqname>
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>
@@ -283,6 +298,7 @@
             <name>IGoodixBiometricsFingerprint</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::IGoodixBiometricsFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.data.iwlan</name>
@@ -364,13 +380,14 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.mwqemadapter</name>
+        <name>vendor.qti.hardware.fingerprint</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IMwqemAdapter</name>
-            <instance>MwqemAdapter</instance>
+            <name>IQtiExtendedFingerprint</name>
+            <instance>default</instance>
         </interface>
+        <fqname>@1.0::IQtiExtendedFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
