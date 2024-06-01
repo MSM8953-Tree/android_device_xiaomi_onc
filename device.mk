@@ -38,6 +38,8 @@ $(call inherit-product, vendor/xiaomi/onclite/onclite-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+include vendor/lineage-priv/keys/keys.mk
+
 BOARD_VENDOR := xiaomi
 PRODUCT_SOONG_NAMESPACES += hardware/xiaomi
 
