@@ -16,6 +16,24 @@
       "message": "this is highly device specific, misusing could easily break sensors data in persist partition",
       "revId": "1a6164596b3a07b4d165fbe25a5d39ccb85f9872",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f90524f2_5ccb56b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29742
+      },
+      "writtenOn": "2024-06-04T08:13:51Z",
+      "side": 1,
+      "message": "it works properly on the device",
+      "parentUuid": "073b5740_2e16a16a",
+      "revId": "1a6164596b3a07b4d165fbe25a5d39ccb85f9872",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
