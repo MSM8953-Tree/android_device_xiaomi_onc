@@ -1,0 +1,1 @@
+allow ueventd qti_debugfs:dir relabelto;
