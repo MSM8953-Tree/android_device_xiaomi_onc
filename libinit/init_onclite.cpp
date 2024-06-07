@@ -18,10 +18,14 @@ using android::base::GetProperty;
 
 static const std::string ro_props_sources[] = {
     "",
+    "bootimage.",
     "odm.",
+    "odm_dlkm.",
+    "oem.",
     "product.",
     "system.",
     "system_ext.",
+    "system_dlkm.",
     "vendor.",
     "vendor_dlkm."
 };
