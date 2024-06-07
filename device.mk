@@ -32,8 +32,6 @@ TARGET_BOARD_SUFFIX := _64
 
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
 
-PRODUCT_PACKAGES += FMRadioExclude
-
 PRODUCT_PACKAGES += BatteryResOnc
 
 PRODUCT_PACKAGES += CertifiedResOnc
@@ -271,10 +269,9 @@ PRODUCT_PACKAGES += \
     com.fingerprints.extension@1.0.vendor \
     vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
 
-# FM
+# FM Radio
 PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
+    FMRadioExclude
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
