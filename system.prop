@@ -143,6 +143,7 @@ ro.vendor.qti.am.reschedule_service=true
 ro.vendor.qti.sys.fw.bservice_enable=true
 ro.egl.blobcache.multifile=true
 ro.egl.blobcache.multifile_limit=33554432
+ro.hw_timeout_multiplier=6
 
 #system prop for Bluetooth SOC type
 vendor.bluetooth.soc=pronto
