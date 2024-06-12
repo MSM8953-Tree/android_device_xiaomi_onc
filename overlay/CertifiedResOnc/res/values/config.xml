@@ -4,17 +4,13 @@
      Copyright (C) 2024 Hadad <hadad@linuxmail.org>
      SPDX-License-Identifier: Apache-2.0
 -->
-<resources>
-    <!-- Build properties from a GMS certified device against current platform SPL level -->
-    <string-array name="config_certifiedBuildProperties" translatable="false">
-        <item>google</item> <!-- Build.BRAND -->
-        <item>Google</item> <!-- Build.MANUFACTURER -->
-        <item></item> <!-- Build.ID -->
-        <item>sailfish</item> <!-- Build.DEVICE -->
-        <item>sailfish</item> <!-- Build.PRODUCT -->
-        <item>Pixel</item> <!-- Build.MODEL -->
-        <item>google/sailfish/sailfish:8.1.0/OPM1.171019.011/4448085:user/release-keys</item> <!-- Build.FINGERPRINT -->
-        <item>user</item> <!-- Build.TYPE -->
-        <item>release-keys</item> <!-- Build.TAGS -->
-    </string-array>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="spoof_manufacturer">Google</string>
+    <string name="spoof_brand">google</string>
+    <string name="spoof_device">sailfish</string>
+    <string name="spoof_id">OPM1.171019.011</string>
+    <string name="spoof_fp">google/sailfish/sailfish:8.1.0/OPM1.171019.011/4448085:user/release-keys</string>
+    <string name="spoof_model">Pixel</string>
+    <string name="spoof_product">sailfish</string>
+    <string name="spoof_spl">2017-12-05</string>
 </resources>
