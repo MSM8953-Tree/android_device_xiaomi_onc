@@ -142,6 +142,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
+    libaacwrapper \
+    libvolumelistener \
     tinymix \
     libnbaio
 
@@ -201,6 +203,10 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libgui_vendor \
     libstdc++_vendor \
+    libcamera_metadata.vendor \
+    libexif.vendor \
+    libutilscallstack.vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0.vendor
 
@@ -232,6 +238,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libtinyxml \
+    libdmabufheap.vendor \
     vendor.display.config@1.9 \
     vendor.display.config@1.9.vendor
 
@@ -251,6 +258,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1 \
     android.hardware.biometrics.fingerprint@2.1.vendor
 
 PRODUCT_COPY_FILES += \
@@ -285,6 +293,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libcurl \
+    libcurl.vendor \
     libwifi-hal-ctrl
 
 # Health HAL
@@ -298,12 +307,18 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.allocator@1.0 \
+    android.hidl.allocator@1.0.vendor \
     android.hidl.base@1.0 \
     android.hidl.base@1.0.vendor \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0.vendor \
+    android.hidl.memory@1.0 \
+    android.hidl.memory@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
+    libhidlmemory \
+    libhidlmemory.vendor \
     libhwbinder \
     libhwbinder.vendor
 
@@ -382,9 +397,14 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
 PRODUCT_PACKAGES += \
-   android.media.audio.common.types-V2-cpp \
-   libavservices_minijail \
-   libavservices_minijail.vendor
+    android.media.audio.common.types-V2-cpp \
+    libjpeg.vendor \
+    libpng.vendor \
+    libyuv.vendor \
+    libprocessgroup.vendor \
+    libion.vendor \
+    libavservices_minijail \
+    libavservices_minijail.vendor
 
 # Netutils
 PRODUCT_PACKAGES += \
@@ -427,6 +447,7 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
+    libjsoncpp.vendor \
     libjson
 
 PRODUCT_COPY_FILES += \
@@ -441,6 +462,10 @@ PRODUCT_PACKAGES += \
 
 # QTI
 PRODUCT_PACKAGES += \
+    libsqlite.vendor \
+    libsysutils.vendor \
+    libcrypto_utils.vendor \
+    libssl.vendor \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
@@ -505,6 +530,8 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils-prd \
     qti_telephony_utils.xml \
     qti_telephony_utils_prd.xml \
+    libnetutils \
+    libnetutils.vendor \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
@@ -520,6 +547,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
     android.frameworks.sensorservice@1.0 \
+    libdumpstateutil.vendor \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
@@ -564,6 +592,9 @@ PRODUCT_PACKAGES += \
     hostapd \
     wcnss_service \
     wificond \
+    libwifi-hal \
+    libwifi-hal-qcom \
+    libwifi-system-iface.vendor \
     wpa_supplicant \
     wpa_supplicant.conf
 
