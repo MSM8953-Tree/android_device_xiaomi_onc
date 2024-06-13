@@ -14,10 +14,6 @@
 # limitations under the License.
 #
 
-# Inherit from special access with sign
-include vendor/lineage-priv/keys/keys.mk
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.oem_unlock_supported=1
-
 PRODUCT_SHIPPING_API_LEVEL := 28
 
 BOARD_SHIPPING_API_LEVEL := 28
