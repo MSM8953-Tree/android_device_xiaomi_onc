@@ -206,6 +206,7 @@ PRODUCT_PACKAGES += \
     libcamera_metadata.vendor \
     libexif.vendor \
     libutilscallstack.vendor \
+    libexpat.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0.vendor
@@ -281,6 +282,7 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
+    libgatekeeper.vendor \
     android.hardware.gatekeeper@1.0.vendor
 
 # GNSS
@@ -367,6 +369,11 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
+    libkeymaster4.vendor \
+    libkeymaster4support.vendor \
+    libkeymaster_portable.vendor \
+    libkeymaster_messages.vendor \
+    libpuresoftkeymasterdevice.vendor \
     android.hardware.keymaster@4.1.vendor
 
 # Lights
@@ -437,6 +444,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    libpower.vendor \
     android.hardware.power@1.2.vendor \
     android.hardware.power-service-qti \
     vendor.qti.hardware.perf@2.2.vendor
@@ -477,6 +485,7 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    liblzma.vendor \
     fstab.qcom \
     fstab.qcom_ramdisk \
     fstab.qcom_ramdisk2 \
@@ -551,6 +560,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
     android.frameworks.sensorservice@1.0 \
+    libunwindstack.vendor \
     libdumpstateutil.vendor \
     libsensorndkbridge
 
