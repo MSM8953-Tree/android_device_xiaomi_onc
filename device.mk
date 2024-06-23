@@ -138,6 +138,7 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
+    libaudiopreprocessing \
     libaudioroute \
     libaudio-resampler \
     libqcomvisualizer \
@@ -479,6 +480,8 @@ PRODUCT_PACKAGES += \
     libsysutils.vendor \
     libcrypto_utils.vendor \
     libssl.vendor \
+    libbinder.vendor \
+    libevent.vendor \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
@@ -544,7 +547,7 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils-prd \
     qti_telephony_utils.xml \
     qti_telephony_utils_prd.xml \
-    libnetutils \
+    libziparchive.vendor \
     libnetutils.vendor \
     telephony-ext
 
