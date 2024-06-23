@@ -145,6 +145,7 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libaacwrapper \
     libvolumelistener \
+    libtinycompress \
     tinymix \
     libnbaio
 
