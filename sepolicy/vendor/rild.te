@@ -20,3 +20,5 @@ allow rild system_data_file:lnk_file read;
 allow rild system_data_file:dir getattr;
 allow rild system_userdir_file:dir { search getattr };
 allow rild radio_data_file:lnk_file getattr;
+
+allow rild diag_device:chr_file rw_file_perms;
