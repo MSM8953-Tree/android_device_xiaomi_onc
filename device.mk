@@ -381,7 +381,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.xiaomi
+    android.hardware.light@2.0-service.onclite
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
