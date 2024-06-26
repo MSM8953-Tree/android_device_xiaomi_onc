@@ -2,6 +2,7 @@
 # vendor.prop for onc
 #
 
+debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
 drm.service.enabled=true
 persist.dbg.volte_avail_ovr=1
