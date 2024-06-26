@@ -565,4 +565,58 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <instance>default</instance>
     </interface>
 </hal>
+<hal format="aidl" optional="true">
+    <name>android.hardware.radio.data</name>
+    <version>1</version>
+    <interface>
+        <name>IRadioData</name>
+        <instance>slot1</instance>
+        <instance>slot2</instance>
+    </interface>
+</hal>
+<hal format="aidl" optional="true">
+    <name>android.hardware.radio.messaging</name>
+    <version>1</version>
+    <interface>
+        <name>IRadioMessaging</name>
+        <instance>slot1</instance>
+        <instance>slot2</instance>
+    </interface>
+</hal>
+<hal format="aidl" optional="true">
+    <name>android.hardware.radio.modem</name>
+    <version>1</version>
+    <interface>
+        <name>IRadioModem</name>
+        <instance>slot1</instance>
+        <instance>slot2</instance>
+    </interface>
+</hal>
+<hal format="aidl" optional="true">
+    <name>android.hardware.radio.network</name>
+    <version>1</version>
+    <interface>
+        <name>IRadioNetwork</name>
+        <instance>slot1</instance>
+        <instance>slot2</instance>
+    </interface>
+</hal>
+<hal format="aidl" optional="true">
+    <name>android.hardware.radio.sim</name>
+    <version>1</version>
+    <interface>
+        <name>IRadioSim</name>
+        <instance>slot1</instance>
+        <instance>slot2</instance>
+    </interface>
+</hal>
+<hal format="aidl" optional="true">
+    <name>android.hardware.radio.voice</name>
+    <version>1</version>
+    <interface>
+        <name>IRadioVoice</name>
+        <instance>slot1</instance>
+        <instance>slot2</instance>
+    </interface>
+</hal>
 </compatibility-matrix>
