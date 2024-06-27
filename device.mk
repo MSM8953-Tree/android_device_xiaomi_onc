@@ -575,6 +575,7 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libgui_shim:64 \
     libui_shim.vendor
 
 # Soong namespaces
