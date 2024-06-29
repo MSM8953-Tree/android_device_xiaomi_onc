@@ -1,10 +1,14 @@
-# Alarm - from LA.UM.10.6.2.r1-02500-89xx.0
--product/app/PowerOffAlarm/PowerOffAlarm.apk|bc906abd03e4a243201dde626b6580fd8a4f73ce
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|586b142f9bc4bf3098b4962682c4de1c13810f9b
-vendor/bin/power_off_alarm|b8c7ddc1bed336753c3746925fd0f4a9925aa36c
+# Alarm - from LA.UM.10.6.2.c26-01500-89xx.0
+-product/app/PowerOffAlarm/PowerOffAlarm.apk|c7a8a195c47e1a3386173106ff6e2a68403b2e14
+system_ext/lib/vendor.qti.hardware.alarm@1.0.so|f01584c5271e495490993ba505d9f3b46f280020
+system_ext/lib64/vendor.qti.hardware.alarm@1.0.so|abf6cf11e5f5f3b5a111350aae351df62532ed71
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|e8f29b90facd4d605dca41644f5a0dc77f6d2e9b
+vendor/bin/power_off_alarm|b41ffb912ae8db9c3abd7e3c94e9e77160cf7ff6
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|4129558506dc078c03679ba362acda4755457742
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|3c182fd3343942c431e1d27d87f8fe114644ca36
+vendor/lib/hw/vendor.qti.hardware.alarm@1.0-impl.so|71f763e038e3083000269fd0263fbf459ed3d6d9
+vendor/lib/vendor.qti.hardware.alarm@1.0.so|79f76c8106841ebda720989b60472c81bac40424
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|fdc8542c93c3e0572a172040bb6bb741baba348e
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|f34f3f363932160ef659ec21543b0d33f0215dbc
 
 # ANT+ - from LA.UM.10.6.2.c26-01500-89xx.0
 system/lib/com.dsi.ant@1.0.so|8503fc0c3a86b7c69c0ee8b612f65942a05013f3
