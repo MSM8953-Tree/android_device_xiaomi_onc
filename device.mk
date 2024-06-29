@@ -381,7 +381,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.xiaomi
+    android.hardware.light@2.0-service.onclite
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -614,9 +614,6 @@ PRODUCT_PACKAGES += \
     hostapd \
     wcnss_service \
     wificond \
-    libwifi-hal \
-    libwifi-hal-qcom \
-    libwifi-system-iface.vendor \
     wpa_supplicant \
     wpa_supplicant.conf
 
