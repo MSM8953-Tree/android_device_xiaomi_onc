@@ -1,0 +1,1 @@
+allow vendor_dpmd diag_device:chr_file { create open read write setattr getattr map ioctl relabelfrom };
