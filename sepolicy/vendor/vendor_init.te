@@ -81,3 +81,5 @@ set_prop(vendor_init, radio_prop)
 
 get_prop(vendor_init, vendor_fm_prop)
 set_prop(vendor_init, vendor_fm_prop)
+
+allow vendor_init sysfs_ssr_toggle:file { create };
