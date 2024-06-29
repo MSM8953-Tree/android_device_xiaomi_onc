@@ -6,11 +6,15 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|4129558506dc078c03679ba362acda4755457742
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|3c182fd3343942c431e1d27d87f8fe114644ca36
 
-# ANT+ - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
-product/lib/com.qualcomm.qti.ant@1.0.so|8119c98f53a94736d95a2fb59225e0a054e038b8
-product/lib64/com.qualcomm.qti.ant@1.0.so|f40868ad57012f1a512b14c889bc8380652cc50f
-vendor/lib/com.qualcomm.qti.ant@1.0.so|8119c98f53a94736d95a2fb59225e0a054e038b8
-vendor/lib64/com.qualcomm.qti.ant@1.0.so|f40868ad57012f1a512b14c889bc8380652cc50f
+# ANT+ - from LA.UM.10.6.2.c26-01500-89xx.0
+system/lib/com.dsi.ant@1.0.so|8503fc0c3a86b7c69c0ee8b612f65942a05013f3
+system/lib64/com.dsi.ant@1.0.so|53417d4c9dd00de133b3ea521b380d1ad91a1e42
+system_ext/lib/com.qualcomm.qti.ant@1.0.so|2c9b0ef686c0222903ebec996295dcc8787bf873
+system_ext/lib64/com.qualcomm.qti.ant@1.0.so|2bad2579ce576c46af6a50ee6687bd92fa7f76cd
+vendor/lib/hw/com.dsi.ant@1.0-impl.so|5afa58aa4e28a093b60fbe4fe88d40bcd5019da8
+vendor/lib/com.dsi.ant@1.0.so|9dac2832146e53a59c2f33a725df8a0ab25b3766
+vendor/lib64/hw/com.dsi.ant@1.0-impl.so|6e2b594b44552b42000164c091af5cf7a4c508f5
+vendor/lib64/com.dsi.ant@1.0.so|2b9e399c5abf8b54b9d0329b2315e3ec87f13ae0
 
 # Audio (ACDB) - from MIUI
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|b1af9d0c2df5df1ab93a734060e51b21dc1d80f9
