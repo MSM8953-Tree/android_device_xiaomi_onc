@@ -43,6 +43,7 @@ vendor.display.enable_default_color_mode=0
 # Display Properties as per treble compliance
 vendor.gralloc.enable_fb_ubwc=1
 vendor.display.disable_skip_validate=1
+vendor.display.idle_time=0
 
 #
 # system props for the cne module
@@ -121,7 +122,7 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 # system prop for UBWC
 vendor.video.disable.ubwc=1
 
-#set dalvik virtual machine
+#property to set dalvik virtual machine
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7
 dalvik.vm.dex2oat-filter=speed
@@ -164,14 +165,15 @@ ro.emmc_size=16GB
 vendor.camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
 #system props for SurfaceFlinger
-ro.surface_flinger.enable_layer_caching=true
+ro.surface_flinger.set_idle_timer_ms=80
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.enable_frame_rate_override=false
+ro.surface_flinger.set_display_power_timer_ms=1000
 
-debug.sf.layer_caching_active_layer_timeout_ms=1000
+debug.sf.frame_rate_multiple_threshold=60
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=10500000
 debug.sf.late.app.duration=16600000
