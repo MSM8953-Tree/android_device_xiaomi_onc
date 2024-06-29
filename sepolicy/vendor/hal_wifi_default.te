@@ -7,3 +7,6 @@ allow hal_wifi_default mnt_vendor_file:file { create open read write setattr get
 
 allow hal_wifi_default vendor_tombstone_data_file:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
 allow hal_wifi_default vendor_tombstone_data_file:file { create open read write setattr getattr map ioctl relabelfrom };
+
+get_prop(hal_wifi_default, persist_vendor_debug_wifi_prop)
+set_prop(hal_wifi_default, persist_vendor_debug_wifi_prop)
