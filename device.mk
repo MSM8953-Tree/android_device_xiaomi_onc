@@ -285,7 +285,6 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    libgatekeeper.vendor \
     android.hardware.gatekeeper@1.0.vendor
 
 # GNSS
@@ -372,11 +371,6 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    libkeymaster4.vendor \
-    libkeymaster4support.vendor \
-    libkeymaster_portable.vendor \
-    libkeymaster_messages.vendor \
-    libpuresoftkeymasterdevice.vendor \
     android.hardware.keymaster@4.1.vendor
 
 # Lights
