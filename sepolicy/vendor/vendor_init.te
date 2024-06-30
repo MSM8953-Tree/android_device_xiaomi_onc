@@ -83,6 +83,3 @@ get_prop(vendor_init, vendor_fm_prop)
 set_prop(vendor_init, vendor_fm_prop)
 
 allow vendor_init sysfs_ssr_toggle:file { create };
-
-allow vendor_init vendor_seemp_data_file:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
-allow vendor_init vendor_seemp_data_file:file { create open read write setattr getattr map ioctl relabelfrom };
