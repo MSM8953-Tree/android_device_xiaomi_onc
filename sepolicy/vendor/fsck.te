@@ -1,4 +1,4 @@
 allow fsck sysfs:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
 allow fsck sysfs:file { create open read write setattr getattr map ioctl relabelfrom };
 
-allow fsck self:capability { kill };
+allow fsck self:capability { kill sys_admin dac_override dac_read_search };
