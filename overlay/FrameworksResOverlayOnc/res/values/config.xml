@@ -326,4 +326,7 @@
 
     <!-- Whether device ignores the RSSNR signal implementation -->
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
+
+    <!-- default refresh rate in the zone defined by birghtness and ambient thresholds -->
+    <integer name="config_defaultRefreshRateInZone">60</integer>
 </resources>
