@@ -1,0 +1,1 @@
+allow hal_wifi_supplicant_default self:capability { kill sys_admin sys_nice dac_override dac_read_search };

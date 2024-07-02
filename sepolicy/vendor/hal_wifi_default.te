@@ -1,6 +1,17 @@
 #============= hal_wifi_default ==============
 allow hal_wifi_default proc_net:file rw_file_perms;
-allow hal_wifi_default sysfs:file write;
+
+allow hal_wifi_default rootfs:dir { open read search getattr };
+
+allow hal_wifi_default device:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_wifi_default device:file { create open read write setattr getattr map ioctl relabelfrom };
+
+allow hal_wifi_default proc:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_wifi_default proc:file { create open read write setattr getattr map ioctl relabelfrom };
+
+allow hal_wifi_default sysfs:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+allow hal_wifi_default sysfs:file { create open read write setattr getattr map ioctl relabelfrom };
+allow hal_wifi_default sysfs:lnk_file { create read setattr getattr relabelfrom relabelto unlink };
 
 allow hal_wifi_default mnt_vendor_file:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
 allow hal_wifi_default mnt_vendor_file:file { create open read write setattr getattr map ioctl relabelfrom };
