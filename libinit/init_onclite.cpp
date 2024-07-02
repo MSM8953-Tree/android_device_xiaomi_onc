@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2023 The LineageOS Project
+ * Copyright (C) 2024 Hadad <hadad@linuxmail.org>
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -7,16 +8,17 @@
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
-
 #include "vendor_init.h"
+#include <array>
+#include <string>
 
 // Define variants
-#define VARIANT_ONE "Redmi 7"
-#define VARIANT_TWO "Redmi Y3"
+constexpr char VARIANT_ONE[] = "Redmi 7";
+constexpr char VARIANT_TWO[] = "Redmi Y3";
 
 using android::base::GetProperty;
 
-static const std::string ro_props_sources[] = {
+static const std::array<std::string, 11> ro_props_sources = {
     "",
     "bootimage.",
     "odm.",
@@ -31,7 +33,7 @@ static const std::string ro_props_sources[] = {
 };
 
 void property_override(const std::string& name, const std::string& value, bool add = true) {
-    auto pi = const_cast<prop_info*>(__system_property_find(name.c_str()));
+    prop_info* pi = const_cast<prop_info*>(__system_property_find(name.c_str()));
 
     if (pi != nullptr) {
         __system_property_update(pi, value.c_str(), value.size());
@@ -40,10 +42,10 @@ void property_override(const std::string& name, const std::string& value, bool a
     }
 }
 
-void set_model_props(const std::string &model) {
+void set_model_props(const std::string& model) {
     // Set device model
-    for (const std::string &source : ro_props_sources) {
-        std::string prop = "ro.product." + source + "model";
+    for (const auto& source : ro_props_sources) {
+        const std::string prop = "ro.product." + source + "model";
         property_override(prop, model);
     }
     // Set bluetooth name
@@ -56,9 +58,9 @@ void set_device_model() {
     // Only Redmi Y3 has hwversion 1.19.0.
     // So set the device model based on it.
     if (hwversion == "1.19.0") {
-      set_model_props(VARIANT_TWO);
+        set_model_props(VARIANT_TWO);
     } else {
-      set_model_props(VARIANT_ONE);
+        set_model_props(VARIANT_ONE);
     }
 }
 
