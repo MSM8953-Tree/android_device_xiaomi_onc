@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2018 The LineageOS Project
+ * Copyright (C) 2024 Hadad <hadad@linuxmail.org>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,75 +17,65 @@
 
 #define LOG_TAG "LightService"
 
+#include <fstream>
 #include <log/log.h>
-
+#include <optional>
+#include <string>
+#include <vector>
 #include "Light.h"
 
-#include <fstream>
-
-#define LEDS            "/sys/class/leds/"
-
-#define LCD_LED         LEDS "lcd-backlight/"
-#define WHITE_LED       LEDS "red/"
-
-#define BREATH          "breath"
-#define BRIGHTNESS      "brightness"
-#define DELAY_OFF       "delay_off"
-#define DELAY_ON        "delay_on"
-#define MAX_BRIGHTNESS  "max_brightness"
-
 namespace {
-/*
- * Write value to path and close file.
- */
-static void set(std::string path, std::string value) {
+
+constexpr char LEDS[] = "/sys/class/leds/";
+constexpr char LCD_LED[] = LEDS "lcd-backlight/";
+constexpr char WHITE_LED[] = LEDS "red/";
+constexpr char BREATH[] = "breath";
+constexpr char BRIGHTNESS[] = "brightness";
+constexpr char DELAY_OFF[] = "delay_off";
+constexpr char DELAY_ON[] = "delay_on";
+constexpr char MAX_BRIGHTNESS[] = "max_brightness";
+
+bool writeFile(const std::string& path, const std::string& value) {
     std::ofstream file(path);
-
     if (!file.is_open()) {
-        ALOGW("failed to write %s to %s", value.c_str(), path.c_str());
-        return;
+        ALOGW("Failed to write %s to %s", value.c_str(), path.c_str());
+        return false;
     }
-
     file << value;
+    file.close(); // Close file after writing
+    return true;
 }
 
-static void set(std::string path, int value) {
-    set(path, std::to_string(value));
+bool writeFile(const std::string& path, int value) {
+    return writeFile(path, std::to_string(value));
 }
 
-static int get(std::string path) {
+std::optional<int> readFile(const std::string& path) {
     std::ifstream file(path);
     int value;
-
     if (!file.is_open()) {
-        ALOGW("failed to read from %s", path.c_str());
-        return 0;
+        ALOGW("Failed to read from %s", path.c_str());
+        return std::nullopt;
     }
-
     file >> value;
+    file.close(); // Close file after reading
     return value;
 }
 
-static int getMaxBrightness(std::string path) {
-    int value = get(path);
-    ALOGW("Got max brightness %d", value);
+std::optional<int> getMaxBrightness(const std::string& path) {
+    auto value = readFile(path);
+    if (value) {
+        ALOGI("Got max brightness %d", *value);
+    }
     return value;
 }
 
-static uint32_t getBrightness(const LightState& state) {
-    uint32_t alpha, red, green, blue;
+uint32_t getBrightness(const LightState& state) {
+    uint32_t alpha = (state.color >> 24) & 0xFF;
+    uint32_t red = (state.color >> 16) & 0xFF;
+    uint32_t green = (state.color >> 8) & 0xFF;
+    uint32_t blue = state.color & 0xFF;
 
-    /*
-     * Extract brightness from AARRGGBB.
-     */
-    alpha = (state.color >> 24) & 0xFF;
-    red = (state.color >> 16) & 0xFF;
-    green = (state.color >> 8) & 0xFF;
-    blue = state.color & 0xFF;
-
-    /*
-     * Scale RGB brightness if Alpha brightness is not 0xFF.
-     */
     if (alpha != 0xFF) {
         red = red * alpha / 0xFF;
         green = green * alpha / 0xFF;
@@ -94,51 +85,43 @@ static uint32_t getBrightness(const LightState& state) {
     return (77 * red + 150 * green + 29 * blue) >> 8;
 }
 
-static inline uint32_t scaleBrightness(uint32_t brightness, uint32_t maxBrightness) {
-    return brightness * maxBrightness / 0xFF;
+uint32_t scaleBrightness(uint32_t brightness, uint32_t maxBrightness) {
+    return (brightness * maxBrightness) / 255; // Direct division operation
 }
 
-static inline uint32_t getScaledBrightness(const LightState& state, uint32_t maxBrightness) {
+uint32_t getScaledBrightness(const LightState& state, uint32_t maxBrightness) {
     return scaleBrightness(getBrightness(state), maxBrightness);
 }
 
-static void handleBacklight(const LightState& state) {
-    uint32_t brightness = getScaledBrightness(state, getMaxBrightness(LCD_LED MAX_BRIGHTNESS));
-    set(LCD_LED BRIGHTNESS, brightness);
-}
-
-static void handleNotification(const LightState& state) {
-    uint32_t whiteBrightness = getScaledBrightness(state, getMaxBrightness(WHITE_LED MAX_BRIGHTNESS));
-
-    /* Disable blinking */
-    set(WHITE_LED BREATH, 0);
-
-    if (state.flashMode == Flash::TIMED) {
-
-        /* White */
-        set(WHITE_LED DELAY_OFF, state.flashOffMs);
-        set(WHITE_LED DELAY_ON, state.flashOnMs);
-
-        /* Enable blinking */
-        set(WHITE_LED BREATH, 1);
-    } else {
-        set(WHITE_LED BRIGHTNESS, whiteBrightness);
+void handleBacklight(const LightState& state) {
+    auto maxBrightnessOpt = getMaxBrightness(LCD_LED MAX_BRIGHTNESS);
+    if (maxBrightnessOpt) {
+        uint32_t brightness = getScaledBrightness(state, *maxBrightnessOpt);
+        writeFile(LCD_LED BRIGHTNESS, brightness);
     }
 }
 
-static inline bool isLit(const LightState& state) {
+void handleNotification(const LightState& state) {
+    auto maxBrightnessOpt = getMaxBrightness(WHITE_LED MAX_BRIGHTNESS);
+    if (maxBrightnessOpt) {
+        uint32_t whiteBrightness = getScaledBrightness(state, *maxBrightnessOpt);
+        writeFile(WHITE_LED BREATH, 0); // Disable blinking
+
+        if (state.flashMode == Flash::TIMED) {
+            writeFile(WHITE_LED DELAY_OFF, state.flashOffMs);
+            writeFile(WHITE_LED DELAY_ON, state.flashOnMs);
+            writeFile(WHITE_LED BREATH, 1); // Enable blinking
+        } else {
+            writeFile(WHITE_LED BRIGHTNESS, whiteBrightness);
+        }
+    }
+}
+
+bool isLit(const LightState& state) {
     return state.color & 0x00ffffff;
 }
 
-/* Keep sorted in the order of importance. */
-static std::vector<LightBackend> backends = {
-    { Type::ATTENTION, handleNotification },
-    { Type::NOTIFICATIONS, handleNotification },
-    { Type::BATTERY, handleNotification },
-    { Type::BACKLIGHT, handleBacklight },
-};
-
-}  // anonymous namespace
+} // anonymous namespace
 
 namespace android {
 namespace hardware {
@@ -147,27 +130,27 @@ namespace V2_0 {
 namespace implementation {
 
 Return<Status> Light::setLight(Type type, const LightState& state) {
-    LightStateHandler handler;
+    LightStateHandler handler = nullptr;
     bool handled = false;
 
-    /* Lock global mutex until light state is updated. */
+    // Lock global mutex until light state is updated
     std::lock_guard<std::mutex> lock(globalLock);
 
-    /* Update the cached state value for the current type. */
-    for (LightBackend& backend : backends) {
+    // Update cached state value for current type
+    for (auto& backend : backends) {
         if (backend.type == type) {
             backend.state = state;
             handler = backend.handler;
         }
     }
 
-    /* If no handler has been found, then the type is not supported. */
+    // Return LIGHT_NOT_SUPPORTED if no handler is found
     if (!handler) {
         return Status::LIGHT_NOT_SUPPORTED;
     }
 
-    /* Light up the type with the highest priority that matches the current handler. */
-    for (LightBackend& backend : backends) {
+    // Light up type with highest priority matching handler
+    for (auto& backend : backends) {
         if (handler == backend.handler && isLit(backend.state)) {
             handler(backend.state);
             handled = true;
@@ -175,7 +158,7 @@ Return<Status> Light::setLight(Type type, const LightState& state) {
         }
     }
 
-    /* If no type has been lit up, then turn off the hardware. */
+    // Turn off hardware if no type is lit up
     if (!handled) {
         handler(state);
     }
@@ -186,17 +169,22 @@ Return<Status> Light::setLight(Type type, const LightState& state) {
 Return<void> Light::getSupportedTypes(getSupportedTypes_cb _hidl_cb) {
     std::vector<Type> types;
 
-    for (const LightBackend& backend : backends) {
+    // Lock global mutex until supported types are retrieved
+    std::lock_guard<std::mutex> lock(globalLock);
+
+    // Populate vector with supported types
+    for (const auto& backend : backends) {
         types.push_back(backend.type);
     }
 
+    // Call HIDL callback with supported types
     _hidl_cb(types);
 
     return Void();
 }
 
-}  // namespace implementation
-}  // namespace V2_0
-}  // namespace light
-}  // namespace hardware
-}  // namespace android
+} // namespace implementation
+} // namespace V2_0
+} // namespace light
+} // namespace hardware
+} // namespace android
