@@ -1629,3 +1629,6 @@ vendor/lib64/libthermalfeature.so|1c408911610e5b6a11853aff1900860f9e9a861f
 -vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
 vendor/bin/time_daemon|48401d7f85c87aa3e12ce7b4a969a50cbf59c293
 vendor/lib64/libtime_genoff.so|8bb116ad297a5e4a94da2f10509509cb6e863a5f
+
+# Wi-Fi - from LA.UM.10.6.2.c26-01500-89xx.0
+vendor/bin/wcnss_service|18a234235418d01f7b6faa8a6bea78de5f4d346a

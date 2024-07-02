@@ -606,7 +606,9 @@ PRODUCT_PACKAGES += \
     libcld80211 \
     libwpa_client \
     hostapd \
-    wcnss_service \
+    libwifi-hal \
+    libwifi-hal-qcom \
+    libwifi-system-iface \
     wificond \
     wpa_supplicant \
     wpa_supplicant.conf
