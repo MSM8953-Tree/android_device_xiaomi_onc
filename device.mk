@@ -50,7 +50,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResOnc \
     SettingsOverlayOnc \
     TelephonyResResOnc \
-    WifiOverlayResOnc \
+    WifiResOnc \
     WifiOverlayOnc \
     TetherResOnc \
     VendorResOnc
